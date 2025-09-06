@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      
+
       <main>
         <section
           style={{ backgroundImage: `url(${heroImage.src})` }}
@@ -19,7 +19,7 @@ export default function Home() {
               justice in Kenya & Uganda.
               <a
                 href=""
-                className=" border-primary font-medium border-2 rounded-lg px-4 py-2 ml-4 inline-flex items-center gap-2 text-lg"
+                className=" border-primary font-medium border-2 rounded-lg px-4 py-2 ml-8 inline-flex items-center gap-2 text-lg"
               >
                 <ArrowRightIcon className="size-6 inline" />
                 <span>What we do</span>
