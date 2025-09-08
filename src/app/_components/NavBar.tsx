@@ -11,7 +11,7 @@ export default function NavBar() {
 
   return (
     <nav className="flex flex-col items-center h-full">
-      <ul className="flex gap-8 text-lg ">
+      <ul className="flex gap-8 ">
         {navItems.map((navItem) => (
           <NavBarItem
             setActiveNavItem={setActiveNavItem}
@@ -44,7 +44,7 @@ export default function NavBar() {
                 setActiveNavItem={setActiveNavItem}
                 key={navItem.label}
                 navItem={navItem}
-                className="font-medium text-lg capitalize text-xl"
+                className="font-medium text-lg capitalize"
               />
             ))}
           </ul>

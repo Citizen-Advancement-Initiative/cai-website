@@ -1,4 +1,6 @@
+import herImpactImage from "@/assets/her-impact.jpg";
 import heroImage from "@/assets/hero-image.jpeg";
+import Button from "@/components/Button";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import Header from "./_components/Header";
 
@@ -25,6 +27,25 @@ export default function Home() {
                 <span>What we do</span>
               </a>
             </p>
+          </div>
+        </section>
+
+        <section
+          style={{ backgroundImage: `url(${herImpactImage.src})` }}
+          className="h-screen flex flex-col justify-center items-center bg-center bg-cover bg-clip-text text-transparent "
+        >
+          <p className="flex flex-col text-[240px] leading-50 uppercase text-center font-black mb-10">
+            <span>Inclusivity</span>
+            <span>Matters</span>
+          </p>
+
+          <div className="flex gap-4">
+            <Button className=" rounded-full text-sm font-medium px-10 py-5 uppercase text-background bg-primary">
+              Support us
+            </Button>
+            <Button className=" rounded-full text-sm font-medium px-10 py-5 uppercase text-foreground border border-foreground ">
+              About us
+            </Button>
           </div>
         </section>
       </main>
