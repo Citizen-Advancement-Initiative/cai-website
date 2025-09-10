@@ -3,6 +3,8 @@ import heroImage from "@/assets/hero-image.jpeg";
 import Button from "@/components/Button";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import Header from "./_components/Header";
+import ImpactCard from "./_components/ImpactCard";
+import { achievements } from "./landing.utils";
 
 export default function Home() {
   return (
@@ -46,6 +48,23 @@ export default function Home() {
             <Button className=" rounded-full text-sm font-medium px-10 py-5 uppercase text-foreground border border-foreground ">
               About us
             </Button>
+          </div>
+        </section>
+
+        <section className="h-screen flex flex-col items-center justify-center px-8 pb-8">
+          <p className="text-6xl font-bold text-foreground mb-6 uppercase mt-[4%]">
+            Our <span className="text-primary">Impact</span> Since 2018
+          </p>
+
+          <p className="max-w-[70ch] text-center text-gray-600 mb-20">
+            We promote social entrepreneurship that empowers women in business,
+            young women in leadership and professional women.
+          </p>
+
+          <div className="grid grid-cols-4 gap-4 ">
+            {achievements.map((achievement) => (
+              <ImpactCard key={achievement.title} achievement={achievement} />
+            ))}
           </div>
         </section>
       </main>
