@@ -5,6 +5,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import Header from "./_components/Header";
 import ImpactCard from "./_components/ImpactCard";
 import { achievements } from "./landing.utils";
+import CarouselSection from "./_components/CarouselSection";
 
 export default function Home() {
   return (
@@ -67,6 +68,8 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+    <CarouselSection/>
       </main>
     </>
   );
