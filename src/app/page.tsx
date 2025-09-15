@@ -1,9 +1,9 @@
 import herImpactImage from "@/assets/her-impact.jpg";
 import heroImage from "@/assets/hero-image.jpeg";
 import Button from "@/components/Button";
-import Logo from "@/components/Logo";
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 import CarouselSection from "./_components/CarouselSection";
+import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import ImpactCard from "./_components/ImpactCard";
 import { achievements } from "./landing.utils";
@@ -14,26 +14,80 @@ export default function Home() {
       <Header />
 
       <main>
-        <section
-          style={{ backgroundImage: `url(${heroImage.src})` }}
-          className="w-full h-screen bg-bottom bg-cover flex flex-col"
-        >
-          <div className="mt-auto h-1/3 bg-black/50 flex items-center justify-center">
-            <p className="text-5xl text-white text-center max-w-[80%] leading-16">
-              We respond to the limited collective engagement of special
-              interest groups in governance, sustainable development, and social
-              justice in Kenya & Uganda.
-              <a
-                href=""
-                className=" border-primary font-medium border-2 rounded-lg px-4 py-2 ml-8 inline-flex items-center gap-2 text-lg"
-              >
-                <ArrowRightIcon className="size-6 inline" />
-                <span>What we do</span>
-              </a>
-            </p>
+        {/* heroo */}
+        <section className="w-full h-screen  flex flex-col px-8">
+          <div className="grow capitalize flex flex-col items-center justify-center mt-24">
+            <div className=" flex flex-col items-center justify-center ">
+              <p className="flex items-center text-[150px] font-semibold gap-10">
+                <span className="">Her</span>{" "}
+                <span className="w-[300px] h-[180px] overflow-hidden rounded-full ">
+                  <Image
+                    src={heroImage}
+                    alt=""
+                    className="w-full h-full scale-150 object-cover object-bottom "
+                  />
+                </span>{" "}
+                <span>Voice</span>
+              </p>
+              <p className="text-[150px] font-semibold">Is Power</p>
+            </div>
+            <div className="flex gap-4 mb-20">
+              <Button className=" rounded-full text-sm font-medium px-10 py-5 uppercase text-background bg-primary">
+                Support us
+              </Button>
+              <Button className=" rounded-full text-sm font-medium px-10 py-5 uppercase text-foreground border border-foreground ">
+                About us
+              </Button>
+            </div>
+          </div>
+
+          <div className=" border-t border-foreground/20 flex items-center ">
+            <Image
+              className="h-[150px] object-contain"
+              alt=""
+              width={500}
+              height={500}
+              src={"/partners/safaricom.png"}
+            />
+            <Image
+              className="h-[150px] object-contain"
+              alt=""
+              width={500}
+              height={500}
+              src={"/partners/ford.png"}
+            />
+            <Image
+              className="h-[150px] object-contain"
+              alt=""
+              width={500}
+              height={500}
+              src={"/partners/sme.png"}
+            />
+            <Image
+              className="h-[150px] object-contain"
+              alt=""
+              width={500}
+              height={500}
+              src={"/partners/safaricom.png"}
+            />
+            <Image
+              className="h-[150px] object-contain"
+              alt=""
+              width={500}
+              height={500}
+              src={"/partners/ford.png"}
+            />
+            <Image
+              className="h-[150px] object-contain"
+              alt=""
+              width={500}
+              height={500}
+              src={"/partners/sme.png"}
+            />
           </div>
         </section>
 
+        {/* Inclusivity */}
         <section
           style={{ backgroundImage: `url(${herImpactImage.src})` }}
           className="h-screen flex flex-col justify-center items-center bg-center bg-cover bg-clip-text text-transparent "
@@ -73,12 +127,7 @@ export default function Home() {
         <CarouselSection />
       </main>
 
-      <footer className="h-[80vh] grid grid-cols-2 px-2 py-6">
-        <section>
-          <Logo />
-        </section>
-        <section></section>
-      </footer>
+      <Footer />
     </>
   );
 }
