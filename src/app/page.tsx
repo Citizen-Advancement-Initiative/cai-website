@@ -1,11 +1,12 @@
 import herImpactImage from "@/assets/her-impact.jpg";
 import heroImage from "@/assets/hero-image.jpeg";
 import Button from "@/components/Button";
+import Logo from "@/components/Logo";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import CarouselSection from "./_components/CarouselSection";
 import Header from "./_components/Header";
 import ImpactCard from "./_components/ImpactCard";
 import { achievements } from "./landing.utils";
-import CarouselSection from "./_components/CarouselSection";
 
 export default function Home() {
   return (
@@ -69,8 +70,15 @@ export default function Home() {
           </div>
         </section>
 
-    <CarouselSection/>
+        <CarouselSection />
       </main>
+
+      <footer className="h-[80vh] grid grid-cols-2 px-2 py-6">
+        <section>
+          <Logo />
+        </section>
+        <section></section>
+      </footer>
     </>
   );
 }
