@@ -37,11 +37,11 @@ export default function InfoSection() {
 
   return (
     <section className="min-h-screen px-12 py-8">
-      <h2 className="mt-32 text-5xl font-bold text-center uppercase">
+      <h2 className="mt-32 text-6xl font-bold text-center uppercase">
         Hear our <span className="text-primary">Stories</span>
       </h2>
 
-      <p className="text-center text-foreground/70 text-sm mt-8 max-w-[60ch] mx-auto">
+      <p className="text-center text-foreground/70 mt-6 max-w-[60ch] mx-auto">
         We respond to the limited collective engagement of special interest
         groups in governance, sustainable development, and social justice in
         Kenya & Uganda.

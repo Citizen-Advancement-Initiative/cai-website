@@ -6,6 +6,7 @@ import Header from "./_components/Header";
 import HeroSection from "./_components/HeroSection";
 import ImpactCard from "./_components/ImpactCard";
 import InfoSection from "./_components/InfoSection";
+import JoinUsSection from "./_components/JoinUsSection";
 import { achievements } from "./landing.utils";
 
 export default function Home() {
@@ -18,6 +19,24 @@ export default function Home() {
         <HeroSection />
 
         <InfoSection />
+
+        {/* Impact */}
+        <section className="h-screen flex flex-col items-center justify-center px-8 pb-8">
+          <p className="text-6xl font-bold text-foreground mb-6 uppercase mt-[4%]">
+            Our <span className="text-primary">Impact</span> Since 2018
+          </p>
+
+          <p className="max-w-[70ch] text-center text-gray-600 mb-20">
+            We promote social entrepreneurship that empowers women in business,
+            young women in leadership and professional women.
+          </p>
+
+          <div className="grid grid-cols-4 gap-4 ">
+            {achievements.map((achievement) => (
+              <ImpactCard key={achievement.title} achievement={achievement} />
+            ))}
+          </div>
+        </section>
 
         {/* Inclusivity */}
         <section
@@ -39,24 +58,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="h-screen flex flex-col items-center justify-center px-8 pb-8">
-          <p className="text-6xl font-bold text-foreground mb-6 uppercase mt-[4%]">
-            Our <span className="text-primary">Impact</span> Since 2018
-          </p>
-
-          <p className="max-w-[70ch] text-center text-gray-600 mb-20">
-            We promote social entrepreneurship that empowers women in business,
-            young women in leadership and professional women.
-          </p>
-
-          <div className="grid grid-cols-4 gap-4 ">
-            {achievements.map((achievement) => (
-              <ImpactCard key={achievement.title} achievement={achievement} />
-            ))}
-          </div>
-        </section>
-
         <CarouselSection />
+
+        <JoinUsSection />
       </main>
 
       <Footer />

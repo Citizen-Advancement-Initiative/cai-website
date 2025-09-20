@@ -1,18 +1,13 @@
 "use client";
 
-import carouselImage1 from "@/assets/carousel/1.jpg";
-import carouselImage2 from "@/assets/carousel/2.jpg";
-import carouselImage3 from "@/assets/carousel/3.jpg";
-import carouselImage4 from "@/assets/carousel/4.jpg";
-import { cn } from "@/utils/cn";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const carouselItems = [
-  { caption: "Women in civic space", image: carouselImage1 },
-  { caption: "Digital inclusion", image: carouselImage2 },
-  { caption: "Equal rights", image: carouselImage3 },
-  { caption: "Gender and safe guarding", image: carouselImage4 },
+  { caption: "Women in civic space", imageUrl: "/carousel/1.jpg" },
+  { caption: "Digital inclusion", imageUrl: "/carousel/2.jpg" },
+  { caption: "Equal rights", imageUrl: "/carousel/3.jpg" },
+  { caption: "Gender and safe guarding", imageUrl: "/carousel/4.jpg" },
 ];
 
 export default function CarouselSection() {
@@ -33,41 +28,38 @@ export default function CarouselSection() {
   }, []);
 
   return (
-    <section className="h-screen relative overflow-hidden">
-      <div className="relative overflow-hidden h-full">
-        {items.map(({ image }, idx) => (
+    <section className="relative h-screen overflow-hidden">
+      {items.map((item, idx) => (
+        <article
+          key={item.imageUrl + idx}
+          className={`absolute inset-0 transition-transform duration-1000 ${
+            idx === 0 && isAnimating ? "-translate-y-full" : "translate-y-0"
+          }`}
+          style={{ zIndex: items.length - idx }}
+        >
           <Image
-            className={cn(
-              "w-full object-cover absolute inset-0 transition-transform duration-1000 object-bottom",
-              {
-                "-translate-y-full": idx === 0 && isAnimating,
-              }
-            )}
-            key={image.src + idx}
-            src={image}
+            className="w-full h-full object-cover object-bottom"
+            src={item.imageUrl}
             alt="Caption Image"
-            style={{ zIndex: carouselItems.length - idx }}
+            height={2000}
+            width={2000}
           />
-        ))}
-      </div>
-
-      <div className="flex flex-col pb-12 gap-4 absolute bottom-0 items-center inset-0 justify-end bg-black/20  z-10 ">
-        {carouselItems.map(({ caption }) => (
-          <p
-            className={cn(
-              "text-3xl font-bold text-transparent [-webkit-text-stroke:1px_background] uppercase transition-all duration-300",
-              {
-                "text-background": Boolean(items.find(
-                  (item, index) => item.caption === caption && index === 0
-                )),
-              }
-            )}
-            key={caption}
-          >
-            {caption}
-          </p>
-        ))}
-      </div>
+          <div className="absolute inset-0 z-10 flex flex-col items-center justify-end gap-6 pb-12 bg-black/20">
+            {carouselItems.map((carouselItem) => (
+              <p
+                key={carouselItem.caption}
+                className={`text-6xl font-bold uppercase transition-all duration-500 ${
+                  carouselItem.caption === item.caption
+                    ? "text-background"
+                    : "text-transparent [-webkit-text-stroke:1px_white]"
+                }`}
+              >
+                {carouselItem.caption}
+              </p>
+            ))}
+          </div>
+        </article>
+      ))}
     </section>
   );
 }
