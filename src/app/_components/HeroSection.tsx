@@ -23,24 +23,22 @@ export default function HeroSection() {
         <source src="/videos/hero-video.mp4" type="video/mp4" />
       </video>
 
-      <div className="z-10 flex flex-col items-center justify-center mt-24 capitalize grow bg-black/10">
-        <div className="flex flex-col items-center justify-center  text-background">
-          <p className="flex items-center text-[150px] font-semibold gap-10">
-            <span className="text-primary">Her</span> Voice Is
-          </p>
-          <p className="text-[150px] font-semibold">Power</p>
-        </div>
-        <div className="flex gap-4 mb-20">
-          <Button className="px-10 py-5 text-sm font-medium uppercase rounded-full  text-background bg-primary">
+      <div className="z-10 flex flex-col items-center justify-center capitalize grow bg-black/10">
+        <p className="text-background text-center text-[180px] max-w-[11ch] leading-50 font-semibold">
+          <span className="text-primary">Her</span> Voice Is Power
+        </p>
+
+        <div className="flex gap-4 mt-8">
+          <Button className="px-10 py-5 text-sm font-medium uppercase rounded-full text-background bg-primary">
             Support us
           </Button>
-          <Button className="px-10 py-5 text-sm font-medium uppercase border rounded-full  text-background border-background">
+          <Button className="px-10 py-5 text-sm font-medium uppercase border rounded-full text-background border-background">
             About us
           </Button>
         </div>
       </div>
 
-      <div className="z-10 flex items-center border-t  border-foreground/20 bg-background/50">
+      <div className="absolute inset-x-0 bottom-0 z-10 flex items-center border-t border-foreground/20 bg-background/50">
         {partnerLogos.map((logo, idx) => (
           <Image
             key={idx}
