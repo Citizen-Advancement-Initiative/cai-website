@@ -33,7 +33,7 @@ export default function CarouselSection() {
   }, []);
 
   return (
-    <section className="h-[95vh] relative overflow-hidden">
+    <section className="h-screen relative overflow-hidden">
       <div className="relative overflow-hidden h-full">
         {items.map(({ image }, idx) => (
           <Image
@@ -55,9 +55,9 @@ export default function CarouselSection() {
         {carouselItems.map(({ caption }) => (
           <p
             className={cn(
-              "text-2xl font-bold text-transparent [-webkit-text-stroke:1px_background] uppercase transition-all duration-500",
+              "text-3xl font-bold text-transparent [-webkit-text-stroke:1px_background] uppercase transition-all duration-300",
               {
-                "text-background text-5xl": Boolean(items.find(
+                "text-background": Boolean(items.find(
                   (item, index) => item.caption === caption && index === 0
                 )),
               }
