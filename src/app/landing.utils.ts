@@ -34,6 +34,7 @@ export const navItems: NavItem[] = [
     subItems: [
       {
         label: "Our staff",
+        href:"/our-staff"
       },
       {
         label: "Foundation history",

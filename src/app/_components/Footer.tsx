@@ -101,7 +101,7 @@ export default function Footer() {
           </div>
         </section>
         <p className="col-span-2 text-6xl text-center uppercase text-foreground/5 font-bold">
-          No one gets left behind
+          No one left behind
         </p>
         <p className="text-sm text-foreground/80">
           &copy; {new Date().getFullYear()} Citizen Advancement Initiative | All
