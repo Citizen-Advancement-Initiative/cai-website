@@ -24,7 +24,7 @@ export const navItems: NavItem[] = [
         label: "Women in governance",
       },
       {
-        label: "Our Research",
+        label: "Research and consultancy",
       },
     ],
   },

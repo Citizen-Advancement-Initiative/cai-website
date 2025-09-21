@@ -1,5 +1,6 @@
 import Button from "@/components/Button";
 import Image from "next/image";
+import HeroVideo from "./HeroVideo";
 
 const partnerLogos = [
   "/partners/safaricom.png",
@@ -13,15 +14,7 @@ const partnerLogos = [
 export default function HeroSection() {
   return (
     <section className="relative flex flex-col w-full h-screen overflow-hidden ">
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-x-0 bottom-0 w-full "
-      >
-        <source src="/videos/hero-video.mp4" type="video/mp4" />
-      </video>
+    <HeroVideo/>
 
       <div className="z-10 flex flex-col items-center justify-center capitalize grow bg-black/10">
         <p className="text-background text-center text-[180px] max-w-[11ch] leading-50 font-semibold">

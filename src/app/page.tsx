@@ -21,7 +21,7 @@ export default function Home() {
         <InfoSection />
 
         {/* Impact */}
-        <section className="h-screen flex flex-col items-center justify-center px-8 pb-8">
+        <section className="flex flex-col items-center justify-center h-screen px-8 pb-8">
           <p className="text-6xl font-bold text-foreground mb-6 uppercase mt-[4%]">
             Our <span className="text-primary">Impact</span> Since 2018
           </p>
@@ -41,7 +41,7 @@ export default function Home() {
         {/* Inclusivity */}
         <section
           style={{ backgroundImage: `url(${herImpactImage.src})` }}
-          className="h-screen flex flex-col justify-center items-center bg-center bg-cover bg-clip-text text-transparent "
+          className="flex flex-col items-center justify-center h-screen text-transparent bg-center bg-cover bg-clip-text "
         >
           <p className="flex flex-col text-[240px] leading-50 uppercase text-center font-black mb-12">
             <span>Inclusivity</span>
@@ -49,10 +49,10 @@ export default function Home() {
           </p>
 
           <div className="flex gap-4">
-            <Button className=" rounded-full text-sm font-medium px-10 py-5 uppercase text-background bg-primary">
+            <Button className="px-10 py-5 text-sm font-medium uppercase rounded-full  text-background bg-primary">
               Support us
             </Button>
-            <Button className=" rounded-full text-sm font-medium px-10 py-5 uppercase text-foreground border border-foreground ">
+            <Button className="px-10 py-5 text-sm font-medium uppercase border rounded-full  text-foreground border-foreground">
               About us
             </Button>
           </div>
