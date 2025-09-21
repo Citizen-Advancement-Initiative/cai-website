@@ -12,7 +12,7 @@ export default function Header() {
       <div className="">
         <Link
           href={"/support-us"}
-          className="px-6 py-3 uppercase border rounded-full text-foreground/80 border-foreground/60"
+          className="px-6 py-3 uppercase border rounded-full text-sm text-foreground/80 border-foreground/50"
         >
           Support us
         </Link>
