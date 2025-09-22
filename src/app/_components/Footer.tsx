@@ -1,5 +1,3 @@
-import Logo from "@/components/Logo";
-import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { IconProps } from "@radix-ui/react-icons/dist/types";
 import { ForwardRefExoticComponent, RefAttributes } from "react";
@@ -40,10 +38,60 @@ const socialProfiles: SocialProfile[] = [
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col justify-end h-screen ">
-      <div className="grid grid-cols-2 p-8 gap-y-16 mt-auto">
-        <section className="flex flex-col justify-between m ">
-          <Logo />
+    <footer className="h-[70vh] bg-black text-background pt-20  flex flex-col">
+      <div className="max-w-[1400px] mx-auto grid grid-cols-4 gap-16 grow">
+        <section className="">
+          <p className="text-2xl uppercase underline underline-offset-8 decoration-primary">
+            What we do
+          </p>
+          <p className="mt-8 text-background/70 text-lg">
+            We Help female professionals & entrepreneurs in governance,
+            development and social justice in Kenya and Uganda.
+          </p>
+        </section>
+
+        <section className="">
+          <p className="text-2xl uppercase underline underline-offset-8 decoration-primary">
+            Contact us
+          </p>
+          <p className="mt-8 text-background/70 text-lg">
+            <span className="font-medium">Phone: </span>{" "}
+            <span>+254 729 473 996</span>
+          </p>
+          <p className="mt-4 text-background/70 text-lg">
+            <span className="font-medium">Email: </span>{" "}
+            <span>+info@cai.or.ke</span>
+          </p>
+          <p className="mt-4 text-background/70 text-lg">
+            <span className="font-medium">Office: </span>{" "}
+            <span>Hurlingham Argwings Khodek Nairobi Kenya</span>
+          </p>
+        </section>
+
+        <section className="">
+          <p className="text-2xl uppercase underline underline-offset-8 decoration-primary">
+            Get involved
+          </p>
+
+          <p className="mt-8 text-background/70 text-lg">Donate </p>
+          <p className="mt-4 text-background/70 text-lg">Partner </p>
+          <p className="mt-4 text-background/70 text-lg">Resources </p>
+          <p className="mt-4 text-background/70 text-lg">Attend an event </p>
+          <p className="mt-4 text-background/70 text-lg">Empower</p>
+        </section>
+
+        <section className="">
+          <p className="text-2xl uppercase underline underline-offset-8 decoration-primary">
+            Blogs
+          </p>
+        </section>
+      </div>
+
+      <section className="py-8 border-t border-background/40 w-full">
+        <div className="max-w-[1400px] mx-auto flex items-center justify-between ">
+          <p>
+            &copy; 2025 Citizens Advancement Initiative | All rights Reserved
+          </p>
           <div className="flex gap-4">
             {socialProfiles.map(({ Icon, link }) => (
               <a
@@ -56,61 +104,8 @@ export default function Footer() {
               </a>
             ))}
           </div>
-        </section>
-        <section className="flex flex-col ">
-          <div className="grid grid-cols-2 grow">
-            <div className="flex flex-col gap-8">
-              <p className="text-foreground/80">Quick Links</p>
-              <a target="_blank" className="font-medium uppercase" href="">
-                Home
-              </a>
-              <a target="_blank" className="font-medium uppercase" href="">
-                Support us
-              </a>
-              <a target="_blank" className="font-medium uppercase" href="">
-                Careers
-              </a>
-              <a target="_blank" className="font-medium uppercase" href="">
-                Get involved
-              </a>
-              <a target="_blank" className="font-medium uppercase" href="">
-                Partners
-              </a>
-            </div>
-            <div className="flex flex-col gap-8">
-              <p className="text-foreground/80">Contact Us</p>
-              <a
-                className="flex items-center gap-4 font-medium uppercase"
-                href="mailto:meda@cai.or.ke"
-              >
-                <span className="p-3 rounded-full border-1 border-foreground/20">
-                  <EnvelopeIcon className="size-5" />
-                </span>{" "}
-                Send Email
-              </a>
-              <a
-                href="tel:+254729463996"
-                className="flex items-center gap-4 font-medium uppercase"
-              >
-                <span className="p-3 rounded-full border-1 border-foreground/20">
-                  <PhoneIcon className="size-5" />
-                </span>{" "}
-                Make a call
-              </a>
-            </div>
-          </div>
-        </section>
-        <p className="col-span-2 text-6xl text-center uppercase text-foreground/5 font-bold">
-          No one left behind
-        </p>
-        <p className="text-sm text-foreground/80">
-          &copy; {new Date().getFullYear()} Citizen Advancement Initiative | All
-          rights served
-        </p>
-        <p className="text-sm text-right text-foreground/80">
-          Privacy policy | Terms of service
-        </p>
-      </div>
+        </div>
+      </section>
     </footer>
   );
 }

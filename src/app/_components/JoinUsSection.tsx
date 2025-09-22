@@ -67,7 +67,7 @@ export default function JoinUsSection() {
       <Image
         className="rounded-full absolute object-cover size-[120px] bottom-[10%] right-[20%]"
         alt=""
-        src={"/join-us/4.jpeg"}
+        src={"/join-us/1.jpeg"}
         width={500}
         height={500}
       />

@@ -1,5 +1,4 @@
 import Button from "@/components/Button";
-import Image from "next/image";
 import HeroVideo from "./HeroVideo";
 
 const partnerLogos = [
@@ -14,7 +13,7 @@ const partnerLogos = [
 export default function HeroSection() {
   return (
     <section className="relative flex flex-col w-full h-screen overflow-hidden ">
-    <HeroVideo/>
+      <HeroVideo />
 
       <div className="z-10 flex flex-col items-center justify-center capitalize grow bg-black/10">
         <p className="text-background text-center text-[180px] max-w-[11ch] leading-50 font-semibold">
@@ -29,19 +28,6 @@ export default function HeroSection() {
             About us
           </Button>
         </div>
-      </div>
-
-      <div className="absolute inset-x-0 bottom-0 z-10 flex items-center border-t border-foreground/20 bg-background/50">
-        {partnerLogos.map((logo, idx) => (
-          <Image
-            key={idx}
-            className="h-[120px] object-contain"
-            alt=""
-            width={500}
-            height={500}
-            src={logo}
-          />
-        ))}
       </div>
     </section>
   );
