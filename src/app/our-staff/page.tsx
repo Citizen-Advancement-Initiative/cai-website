@@ -1,51 +1,6 @@
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-
-const staff = [
-  {
-    name: "Benard Meda",
-    role: "Executive Director",
-    imageUrl: "/our-staff/benard.jpeg",
-  },
-  {
-    name: "Joy Adallah",
-    role: "Program and Legal Manager",
-    imageUrl: "/our-staff/benard.jpeg",
-  },
-  {
-    name: "Rebecca Atieno",
-    role: "Program Coordinator",
-    imageUrl: "/our-staff/rebecca.jpeg",
-  },
-  {
-    name: "Chripine Obat",
-    role: "Chief Accountant",
-    imageUrl: "/our-staff/rose.png",
-  },
-];
-
-const consultants = [
-  {
-    name: "Rose Oketch",
-    role: "Digital Consultant",
-    imageUrl: "/our-staff/rose.png",
-  },
-  {
-    name: "Gabriel Okumu",
-    role: "Digital Consultant",
-    imageUrl: "/our-staff/rose.png",
-  },
-  {
-    name: "Maxine Mwendia",
-    role: "Monitoring and Evaluation Officer",
-    imageUrl: "/our-staff/rose.png",
-  },
-  {
-    name: "Joseph Masembe",
-    role: "Regional Climate change consultant",
-    imageUrl: "/our-staff/rose.png",
-  },
-];
+import MemberCard from "./_components/MemberCard";
+import { members } from "./our-staff.utils";
 
 export default function OurStaff() {
   return (
@@ -79,28 +34,11 @@ export default function OurStaff() {
         </h2>
 
         <div className="flex gap-8">
-          {staff.map((member) => (
-            <article key={member.name}>
-              <Image
-                className="size-[300px] rounded-4xl object-cover"
-                height={300}
-                width={300}
-                src={member.imageUrl}
-                alt=""
-              />
-
-              <ArrowRightIcon
-                strokeWidth={2}
-                className="size-6 mt-4  text-secondary"
-              />
-              <p className="text-sm font-medium mt-4 text-foreground/50">
-                {member.role}
-              </p>
-              <p className="font-semibold mt-3 text-lg text-foreground">
-                {member.name}
-              </p>
-            </article>
-          ))}
+          {members
+            .filter((member) => member.category === "staff")
+            .map((member) => (
+              <MemberCard key={member.name} member={member} />
+            ))}
         </div>
       </section>
 
@@ -110,28 +48,11 @@ export default function OurStaff() {
         </h2>
 
         <div className="flex gap-8">
-          {consultants.map((member) => (
-            <article key={member.name}>
-              <Image
-                className="size-[300px] rounded-4xl object-cover"
-                height={300}
-                width={300}
-                src={member.imageUrl}
-                alt=""
-              />
-
-              <ArrowRightIcon
-                strokeWidth={2}
-                className="size-6 mt-4  text-secondary"
-              />
-              <p className="text-sm font-medium mt-4 text-foreground/50">
-                {member.role}
-              </p>
-              <p className="font-semibold mt-3 text-lg text-foreground">
-                {member.name}
-              </p>
-            </article>
-          ))}
+          {members
+            .filter((member) => member.category === "consultant")
+            .map((member) => (
+              <MemberCard key={member.name} member={member} />
+            ))}
         </div>
       </section>
     </main>
