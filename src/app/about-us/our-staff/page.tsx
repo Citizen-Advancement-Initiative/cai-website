@@ -7,7 +7,7 @@ export default function OurStaff() {
     <main>
       <section className="max-w-[1400px] mx-auto  grid grid-cols-2 h-screen items-center gap-10">
         <div className="flex flex-col justify-center">
-          <h2 className="mb-8 text-5xl font-medium capitalize">Our Staff</h2>
+          <h2 className="mb-12 text-5xl font-medium capitalize underline underline-offset-20 decoration-primary">Our Staff</h2>
           <p className="text-2xl text-foreground/60 ">
             Our policy direction, and ultimate accountability is drawn from a
             five-member board of Directors. Our management is vested in the

@@ -8,7 +8,7 @@ type Props = {
 };
 
 export default function MemberCard({ member }: Props) {
-  const memberLink = `/our-staff/${member.name.replace(" ", "-").toLowerCase()}`;
+  const memberLink = `/about-us/our-staff/${member.name.replace(" ", "-").toLowerCase()}`;
 
   return (
     <Link href={memberLink}>

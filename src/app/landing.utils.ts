@@ -34,13 +34,14 @@ export const navItems: NavItem[] = [
     subItems: [
       {
         label: "Our staff",
-        href:"/our-staff"
+        href:"/about-us/our-staff"
       },
       {
         label: "Foundation history",
       },
       {
         label: "Office locations",
+        href:"/about-us/office-locations"
       },
     ],
   },
