@@ -9,9 +9,9 @@ export const members = [
   {
     name: "Joy Adallah",
     role: "Program and Legal Manager",
-    imageUrl: "/our-staff/benard.jpeg",
+    imageUrl: "/our-staff/adallah.jpeg",
     category: "staff",
-    description: `N/A`,
+    description: `Joy is the Legal Manager at Citizen Advancement Initiative (CAI), where she leads legal strategy, compliance, and policy engagement. She has worked across East Africa, bringing expertise in environmental governance, human rights, and sustainable development. At CAI, she also drives mentorship and capacity-building initiatives, helping to shape the next generation of leaders. Currently pursuing a Master of Laws in Environmental Law, Joy combines academic insight with practical experience to advance inclusive legal and policy solutions at both national and regional levels.`,
   },
   {
     name: "Rebecca Atieno",
@@ -27,7 +27,7 @@ Driven by a passion for inclusion and transformation, She is committed to amplif
   {
     name: "Chripine Obat",
     role: "Chief Accountant",
-    imageUrl: "/our-staff/rose.png",
+    imageUrl: "/our-staff/placeholder.jpg",
     category: "staff",
     description: `N/A`,
   },
@@ -49,23 +49,25 @@ With a unique blend of teaching, mentorship, and software engineering practice, 
   {
     name: "Gabriel Okumu",
     role: "Digital Consultant",
-    imageUrl: "/our-staff/rose.png",
+    imageUrl: "/our-staff/placeholder.jpg",
     category: "consultant",
     description: `N/A`,
   },
   {
     name: "Maxine Mwendia",
     role: "Monitoring and Evaluation Officer",
-    imageUrl: "/our-staff/rose.png",
+    imageUrl: "/our-staff/placeholder.jpg",
     category: "consultant",
     description: `N/A`,
   },
   {
     name: "Joseph Masembe",
     role: "Regional Climate change consultant",
-    imageUrl: "/our-staff/rose.png",
+    imageUrl: "/our-staff/placeholder.jpg",
     category: "consultant",
-    description: `N/A`,
+    description: `Joseph Masembe, is the Founder of Uganda’s Little Hands Go Green, as our Regional Director for Climate Change Advocacy in East Africa at the Citizen Advancement Initiative.
+
+Joseph brings with him a wealth of experience in championing children and youth-led climate action, environmental education, advocacy and sustainable development across the Global South and beyond . His experience in Climate Change Advocacy in the Civil Society Space & hi  leadership strengthens our efforts to advance inclusive, community-driven climate advocacy solutions and empower the next generation to be at the forefront of resilience, sustainability  and climate  advocacy.`,
   },
 ] as const;
 
