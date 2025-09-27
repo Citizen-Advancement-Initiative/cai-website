@@ -38,6 +38,7 @@ export const navItems: NavItem[] = [
       },
       {
         label: "Foundation history",
+        href:"/about-us/foundation-history", 
       },
       {
         label: "Office locations",

@@ -1,15 +1,6 @@
 import Button from "@/components/Button";
 import HeroVideo from "./HeroVideo";
 
-const partnerLogos = [
-  "/partners/safaricom.png",
-  "/partners/ford.png",
-  "/partners/sme.png",
-  "/partners/safaricom.png",
-  "/partners/ford.png",
-  "/partners/sme.png",
-];
-
 export default function HeroSection() {
   return (
     <section className="relative flex flex-col w-full h-screen overflow-hidden ">
