@@ -56,9 +56,10 @@ With a unique blend of teaching, mentorship, and software engineering practice, 
   {
     name: "Maxine Mwendia",
     role: "Monitoring and Evaluation Officer",
-    imageUrl: "/our-staff/placeholder.jpg",
+    imageUrl: "/our-staff/maxine.jpeg",
     category: "consultant",
-    description: `N/A`,
+    description: `Ms.Maxine Mwendia serves as the Monitoring and Evaluation Consultant. She brings in expertise in designing and implementing Monitoring and Evaluation tools and systems, interpreting data into actionable decisions and conducting program evaluation. She possess a rich background in banking, customer service, higher learning lecturer, research and strategic planning. In return, these build capacity to drive measurable impact in the society and institutions. Her passion is giving back to the society and serving the community. 
+Maxine holds a Master’s degree in International Studies and a Bachelor of Commerce degree from The University of Nairobi.`,
   },
   {
     name: "Joseph Masembe",

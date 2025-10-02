@@ -93,10 +93,10 @@ export default function Footer() {
             &copy; 2025 Citizens Advancement Initiative | All rights Reserved
           </p>
           <div className="flex gap-4">
-            {socialProfiles.map(({ Icon, link }) => (
+            {socialProfiles.map(({ Icon, link }, idx) => (
               <a
                 className="p-3 border rounded-full border-foreground/20"
-                key={link}
+                key={idx}
                 href={link}
                 target="_blank"
               >
