@@ -13,6 +13,7 @@ export const navItems: NavItem[] = [
       },
       {
         label: "Digital disability inclusion",
+        href: "/what-we-do/digital-disability-inclusion",
       },
       {
         label: "Sexual reproduction health rights",
