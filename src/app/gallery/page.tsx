@@ -1,18 +1,48 @@
 "use client";
 
 import Main from "@/components/Main";
+import { useInView } from "@/hooks/useInView";
 import { cn } from "@/utils/cn";
 import Image from "next/image";
 import { useState } from "react";
 import ImageModal from "./_components/ImageModal";
 import { imageUrls } from "./gallery.data";
 
-export default function Gallery() {
-  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(
-    null
-  );
+function GalleryImage({
+  url,
+  idx,
+  onClick,
+}: {
+  url: string;
+  idx: number;
+  onClick: () => void;
+}) {
+  const { isInView, ref } = useInView<HTMLImageElement>({ threshold: 0.3 });
 
-  console.log("SelectedLL: " , selectedImageIndex)
+  return (
+    <Image
+      ref={ref}
+      onClick={onClick}
+      className={cn(
+        "h-[350px] object-cover object-center cursor-pointer hover:scale-[102%] duration-700 transition-all translate-y-[10%] opacity-0 ",
+        {
+          "col-span-2": idx % 6 === 0 || idx % 6 === 5,
+          "col-span-4": idx % 6 === 1 || idx % 6 === 3,
+          "col-span-3": idx % 6 === 2 || idx % 6 === 4,
+          "opacity-100 translate-y-0": isInView,
+        }
+      )}
+      key={url}
+      src={url}
+      alt=""
+      width={1000}
+      height={1000}
+    />
+  );
+}
+
+export default function Gallery() {
+  const [selectedImageUrl, setSelectedImageUrl] = useState<string | null>(null);
 
   return (
     <Main>
@@ -23,29 +53,19 @@ export default function Gallery() {
 
         <div className="grid grid-cols-9 gap-4">
           {imageUrls.map((url, idx) => (
-            <Image
-              onClick={() => setSelectedImageIndex(idx)}
-              className={cn(
-                "h-[350px] object-cover object-center cursor-pointer  hover:scale-[102%] transition-transform duration-300",
-                {
-                  "col-span-2": idx % 6 === 0 || idx % 6 === 5,
-                  "col-span-4": idx % 6 === 1 || idx % 6 === 3,
-                  "col-span-3": idx % 6 === 2 || idx % 6 === 4,
-                }
-              )}
+            <GalleryImage
+              url={url}
+              idx={idx}
+              onClick={() => setSelectedImageUrl(url)}
               key={url}
-              src={url}
-              alt={""}
-              width={1000}
-              height={1000}
             />
           ))}
         </div>
       </section>
 
       <ImageModal
-        selectedImageIndex={selectedImageIndex}
-        onClose={() => setSelectedImageIndex(null)}
+        selectedImageUrl={selectedImageUrl}
+        onClose={() => setSelectedImageUrl(null)}
       />
     </Main>
   );
