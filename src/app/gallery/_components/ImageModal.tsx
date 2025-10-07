@@ -1,4 +1,4 @@
-import Modal from "@/components/Modal";
+import DialogWrapper from "@/components/DialogWrapper";
 import { ArrowDownTrayIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
@@ -9,7 +9,7 @@ type Props = {
 
 export default function ImageModal({ selectedImageUrl, onClose }: Props) {
   return (
-    <Modal isOpen={Boolean(selectedImageUrl)} onClose={onClose}>
+    <DialogWrapper isOpen={Boolean(selectedImageUrl)} onClose={onClose}>
       {selectedImageUrl ? (
         <>
           <div className=" flex items-center gap-16 fixed top-8 right-16 ">
@@ -41,6 +41,6 @@ export default function ImageModal({ selectedImageUrl, onClose }: Props) {
       ) : (
         <p>No image selected</p>
       )}
-    </Modal>
+    </DialogWrapper>
   );
 }

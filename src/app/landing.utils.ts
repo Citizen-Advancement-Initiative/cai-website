@@ -34,15 +34,15 @@ export const navItems: NavItem[] = [
     subItems: [
       {
         label: "Our staff",
-        href:"/about-us/our-staff"
+        href: "/about-us/our-staff",
       },
       {
         label: "Foundation history",
-        href:"/about-us/foundation-history", 
+        href: "/about-us/foundation-history",
       },
       {
         label: "Office locations",
-        href:"/about-us/office-locations"
+        href: "/about-us/office-locations",
       },
     ],
   },
@@ -65,6 +65,7 @@ export const navItems: NavItem[] = [
       },
       {
         label: "Reports",
+        href: "/our-publications/reports",
       },
       {
         label: "News papers",
