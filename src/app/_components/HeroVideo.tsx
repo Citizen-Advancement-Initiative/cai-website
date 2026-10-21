@@ -35,7 +35,7 @@ export default function HeroVideo() {
         loop
         muted={isMuted}
         playsInline
-        className="absolute inset-x-0 bottom-0 w-full "
+        className="w-full h-full absolute object-cover object-[center_25%]"
       >
         <source src="/videos/hero-video.mp4" type="video/mp4" />
       </video>

@@ -9,7 +9,7 @@ export default async function Member({
   const { slug } = await params;
 
   const member = members.find(
-    (member) => member.name.toLowerCase() === slug.replace("-", " ")
+    (member) => member.name.toLowerCase() === slug.replaceAll("-", " "),
   );
 
   return (
@@ -33,7 +33,7 @@ export default async function Member({
 
       <section className="max-w-[800px] mx-auto mt-20">
         <p className="text-2xl text-foreground/80 whitespace-pre-line">
-        {member?.description || ""}
+          {member?.description || ""}
         </p>
       </section>
     </main>

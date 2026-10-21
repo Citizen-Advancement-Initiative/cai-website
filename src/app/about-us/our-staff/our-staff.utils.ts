@@ -47,11 +47,13 @@ In addition, Rose is currently a Digital Consultant and Trainer at Citizen Advan
 With a unique blend of teaching, mentorship, and software engineering practice, Rose fosters engaging and interactive learning environments. Their mission is to make programming accessible, enjoyable, and impactful, equipping students with the technical and creative skills needed to succeed in today’s fast-evolving digital landscape.`,
   },
   {
-    name: "Gabriel Okumu",
-    role: "Digital Consultant",
-    imageUrl: "/our-staff/placeholder.jpg",
+    name: "Gabriel Okumu Ogeda",
+    role: "Technology Consultant and Facilitator CAI",
+    imageUrl: "/our-staff/gabriel.jpeg",
     category: "consultant",
-    description: `N/A`,
+    description: `With over 15 years of experience driving software engineering and DevOps solutions across high-impact public and private sector initiatives, I specialize in designing scalable digital architectures, enterprise web applications, and mission-critical systems. My technical trajectory includes serving as a Senior DevOps Engineer and Full-Stack Developer on transformational projects such as the eCitizen Kenya platform with WebMasters Africa and WebMasters Kenya, as well as digital solutions for institutions including the Kenya National Theatre (KNT), Music Copyright Society of Kenya (MCSK), ProfConnects Ltd, Kisumu West Community iHub (KISWECHU CBO) and SOS Children's Villages Kenya.
+
+Leveraging this extensive background in full-stack architecture, system integration, cloud operations and Applied Tech in the community (As a Subject), I currently serve as a Technology Consultant for the Citizen Advancement Initiative (CAI). In this role, I direct tech-driven programs focused on digital accessibility and inclusive technology for Persons with Disabilities (PWDs). By combining deep technical capability with specialized consultancy working with communities, I build inclusion programs for Persons with Disabilities through Tech.`,
   },
   {
     name: "Maxine Mwendia",
@@ -60,15 +62,6 @@ With a unique blend of teaching, mentorship, and software engineering practice, 
     category: "consultant",
     description: `Ms.Maxine Mwendia serves as the Monitoring and Evaluation Consultant. She brings in expertise in designing and implementing Monitoring and Evaluation tools and systems, interpreting data into actionable decisions and conducting program evaluation. She possess a rich background in banking, customer service, higher learning lecturer, research and strategic planning. In return, these build capacity to drive measurable impact in the society and institutions. Her passion is giving back to the society and serving the community. 
 Maxine holds a Master’s degree in International Studies and a Bachelor of Commerce degree from The University of Nairobi.`,
-  },
-  {
-    name: "Joseph Masembe",
-    role: "Regional Climate change consultant",
-    imageUrl: "/our-staff/placeholder.jpg",
-    category: "consultant",
-    description: `Joseph Masembe, is the Founder of Uganda’s Little Hands Go Green, as our Regional Director for Climate Change Advocacy in East Africa at the Citizen Advancement Initiative.
-
-Joseph brings with him a wealth of experience in championing children and youth-led climate action, environmental education, advocacy and sustainable development across the Global South and beyond . His experience in Climate Change Advocacy in the Civil Society Space & hi  leadership strengthens our efforts to advance inclusive, community-driven climate advocacy solutions and empower the next generation to be at the forefront of resilience, sustainability  and climate  advocacy.`,
   },
 ] as const;
 
