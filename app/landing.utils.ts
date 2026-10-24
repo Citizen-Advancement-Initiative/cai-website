@@ -5,30 +5,21 @@ export type NavItem = {
 };
 export const navItems: NavItem[] = [
   {
-    label: "What we do",
-    href: "/what-we-do",
+    label: "Our publications",
     subItems: [
       {
-        label: "Education on digital skills",
+        label: "Blogs",
       },
       {
-        label: "Digital disability inclusion",
-        href: "/what-we-do/digital-disability-inclusion",
+        label: "Reports",
+        href: "/our-publications/reports",
       },
       {
-        label: "Sexual reproduction health rights",
-      },
-      {
-        label: "Climate change",
-      },
-      {
-        label: "Women in governance",
-      },
-      {
-        label: "Research and consultancy",
+        label: "News papers",
       },
     ],
   },
+
   {
     label: "About us",
     href: "/about-us",
@@ -48,39 +39,9 @@ export const navItems: NavItem[] = [
     ],
   },
   {
-    label: "Where we work",
-    subItems: [
-      {
-        label: "Kenya",
-      },
-      {
-        label: "Uganda",
-      },
-    ],
-  },
-  {
-    label: "Our publications",
-    subItems: [
-      {
-        label: "Blogs",
-      },
-      {
-        label: "Reports",
-        href: "/our-publications/reports",
-      },
-      {
-        label: "News papers",
-      },
-    ],
-  },
-  {
-    label: "Our projects",
-  },
-  {
     label: "Gallery",
     href: "/gallery",
   },
- 
 ];
 
 export type Achievement = {
