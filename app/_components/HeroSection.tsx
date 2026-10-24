@@ -1,4 +1,9 @@
-import { Button } from "@/components/ui/button";
+import {
+  INFO_MODAL_TYPE_KEY,
+  InfoModalType,
+} from "@/components/info-modal.utils";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "cn";
 import Link from "next/link";
 import HeroVideo from "./HeroVideo";
 
@@ -12,13 +17,19 @@ export default function HeroSection() {
           <span className="text-primary">Her</span> Voice Is Power
         </p>
 
-        <div className="flex gap-4 mt-8">
-          <Button className="px-10 py-5 text-sm font-medium uppercase rounded-full text-background bg-primary">
+        <div className="flex items-center gap-4 mt-8">
+          <Link
+            href={`/?${INFO_MODAL_TYPE_KEY}=${InfoModalType.SupportUs}`}
+            className={cn(buttonVariants(), "px-10 py-5 rounded-full")}
+          >
             Support us
-          </Button>
+          </Link>
           <Link
             href={"/about-us"}
-            className="px-10 py-5 text-sm font-medium uppercase border rounded-full text-background border-background"
+            className={cn(
+              buttonVariants({ variant: "outline" }),
+              "px-10 py-5 rounded-full",
+            )}
           >
             About us
           </Link>

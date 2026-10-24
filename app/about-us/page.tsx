@@ -7,7 +7,7 @@ import { foundations, values } from "./about-us.constants";
 export default function AboutUs() {
   return (
     <Main className="mb-32">
-      <section className="max-w-[1400px] mx-auto  grid grid-cols-2 h-screen items-center gap-10 mt-24">
+      <section className="max-w-[1400px] mx-auto  grid grid-cols-2 h-screen items-center gap-10">
         <div className="flex flex-col justify-center">
           <h2 className="mb-12 text-5xl font-medium underline capitalize underline-offset-20 decoration-primary">
             About Us

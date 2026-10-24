@@ -18,6 +18,7 @@ export const navItems: NavItem[] = [
         label: "News papers",
       },
     ],
+
   },
 
   {
@@ -41,6 +42,10 @@ export const navItems: NavItem[] = [
   {
     label: "Gallery",
     href: "/gallery",
+  },
+  {
+    label: "Where we work",
+    href: "/where-we-work",
   },
 ];
 

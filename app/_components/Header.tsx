@@ -1,5 +1,9 @@
 "use client";
 
+import {
+  INFO_MODAL_TYPE_KEY,
+  InfoModalType,
+} from "@/components/info-modal.utils";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
 import { cn } from "cn";
@@ -10,6 +14,13 @@ import { NavItem, navItems } from "../landing.utils";
 
 export default function Header() {
   const router = useRouter();
+
+  function openInfoModal(type: InfoModalType) {
+    const urlSearchParams = new URLSearchParams();
+
+    urlSearchParams.set(INFO_MODAL_TYPE_KEY, type);
+    router.push(`?${urlSearchParams.toString()}`);
+  }
 
   const [selectedNavItem, setSelectedNavItem] = useState<NavItem | null>(null);
 
@@ -68,7 +79,9 @@ export default function Header() {
             <ul className="flex flex-col gap-4">
               {selectedNavItem.subItems?.map((subItem) => (
                 <li key={subItem.label}>
-                  <Link className="hover:underline" href={subItem.href ?? ""}>{subItem.label}</Link>
+                  <Link className="hover:underline" href={subItem.href ?? ""}>
+                    {subItem.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -77,10 +90,16 @@ export default function Header() {
       </nav>
 
       <div className="flex items-center gap-4">
-        <Button className="px-6 py-6 text-xs uppercase rounded-full">
+        <Button
+          onClick={() => openInfoModal(InfoModalType.GetInvolved)}
+          className="px-6 py-6 text-xs uppercase rounded-full"
+        >
           Get Involved
         </Button>
-        <Button className="px-6 py-6 text-xs uppercase rounded-full ">
+        <Button
+          onClick={() => openInfoModal(InfoModalType.SupportUs)}
+          className="px-6 py-6 text-xs uppercase rounded-full "
+        >
           Support us
         </Button>
       </div>

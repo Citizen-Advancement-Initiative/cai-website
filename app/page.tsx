@@ -1,5 +1,7 @@
 import herImpactImage from "@/assets/her-impact.jpg";
+import InfoModal from "@/components/InfoModal";
 import { Button } from "@/components/ui/button";
+import { Suspense } from "react";
 import CarouselSection from "./_components/CarouselSection";
 import HeroSection from "./_components/HeroSection";
 import ImpactCard from "./_components/ImpactCard";
@@ -10,7 +12,9 @@ import { achievements } from "./landing.utils";
 export default function Home() {
   return (
     <main>
-      {/* hero */}
+      <Suspense fallback={null}>
+        <InfoModal />
+      </Suspense>
       <HeroSection />
 
       <InfoSection />
