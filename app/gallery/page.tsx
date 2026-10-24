@@ -2,7 +2,7 @@
 
 import Main from "@/components/Main";
 import { useInView } from "@/hooks/useInView";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useState } from "react";
 import ImageModal from "./_components/ImageModal";
@@ -30,7 +30,7 @@ function GalleryImage({
           "col-span-4": idx % 6 === 1 || idx % 6 === 3,
           "col-span-3": idx % 6 === 2 || idx % 6 === 4,
           "opacity-100 translate-y-0": isInView,
-        }
+        },
       )}
       key={url}
       src={url}

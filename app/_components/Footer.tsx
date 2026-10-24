@@ -2,7 +2,7 @@ import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { IconProps } from "@radix-ui/react-icons/dist/types";
 import { ForwardRefExoticComponent, RefAttributes } from "react";
 import { IconType } from "react-icons";
-import { FaTiktok, FaYoutube } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 type SocialProfile = {
@@ -21,17 +21,16 @@ const socialProfiles: SocialProfile[] = [
     link: "https://www.instagram.com/cai.kenya__",
     Icon: InstagramLogoIcon,
   },
+  // {
+  //   link: "",
+  //   Icon: FaYoutube,
+  // },
   {
-    link: "",
-    Icon: FaYoutube,
-  },
-
-  {
-    link: "",
+    link: "https://www.tiktok.com/@caikenya?_r=1&_t=ZS-9AgBZJKXJZs",
     Icon: FaTiktok,
   },
   {
-    link: "",
+    link: "https://x.com/caikenya",
     Icon: FaXTwitter,
   },
 ];

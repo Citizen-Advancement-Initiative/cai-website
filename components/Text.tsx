@@ -1,4 +1,4 @@
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 
 type Props = {
@@ -17,7 +17,7 @@ export default function Text({
         <h2
           className={cn(
             "mb-12 text-5xl font-medium capitalize underline underline-offset-20 decoration-primary",
-            className
+            className,
           )}
         >
           {children}
@@ -29,7 +29,7 @@ export default function Text({
         <h3
           className={cn(
             "mb-12 text-4xl font-medium capitalize border-t-2  w-fit border-secondary pt-2",
-            className
+            className,
           )}
         >
           {children}

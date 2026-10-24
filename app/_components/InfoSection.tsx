@@ -1,7 +1,7 @@
 "use client";
 
-import Button from "@/components/Button";
-import { cn } from "@/utils/cn";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
@@ -56,7 +56,7 @@ export default function InfoSection() {
               "relative flex-none overflow-hidden rounded-4xl h-[400px] w-[140px] transition-[width] duration-300",
               {
                 "w-[400px]": activeIndex === idx,
-              }
+              },
             )}
             key={info.title}
           >
@@ -65,7 +65,7 @@ export default function InfoSection() {
                 "absolute p-2 bg-background/20 right-6 top-6 z-20 rounded-full transition-opacity duration-300",
                 {
                   "opacity-0": activeIndex !== idx,
-                }
+                },
               )}
               href={""}
             >
@@ -84,7 +84,7 @@ export default function InfoSection() {
                 "absolute inset-0 bottom-0 z-10 flex flex-col p-8 bg-black/30 transition-opacity duration-300",
                 {
                   "opacity-0": activeIndex !== idx,
-                }
+                },
               )}
             >
               <p className="mt-auto mb-4 font-bold text-background">

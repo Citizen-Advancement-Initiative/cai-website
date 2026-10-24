@@ -1,5 +1,5 @@
 import herImpactImage from "@/assets/her-impact.jpg";
-import Button from "@/components/Button";
+import { Button } from "@/components/ui/button";
 import CarouselSection from "./_components/CarouselSection";
 import HeroSection from "./_components/HeroSection";
 import ImpactCard from "./_components/ImpactCard";

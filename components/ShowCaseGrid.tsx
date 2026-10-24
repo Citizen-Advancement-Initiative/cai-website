@@ -1,4 +1,4 @@
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 type ShowCase = {
@@ -21,7 +21,13 @@ export default function ShowCaseGrid({ showCases }: Props) {
             "flex-row-reverse": index % 2 === 0,
           })}
         >
-          <Image className="aspect-square object-cover" src={showCase.imageUrl} width={700} height={700} alt={""} />
+          <Image
+            className="aspect-square object-cover"
+            src={showCase.imageUrl}
+            width={700}
+            height={700}
+            alt={""}
+          />
           <div className=" px-24 text-foreground">
             <p className="text-3xl mb-6 font-medium underline underline-offset-16 decoration-primary">
               {showCase.title}

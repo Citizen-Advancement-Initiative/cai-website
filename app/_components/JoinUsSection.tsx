@@ -1,4 +1,4 @@
-import Button from "@/components/Button";
+import { Button } from "@/components/ui/button";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
@@ -50,13 +50,13 @@ export default function JoinUsSection() {
         width={500}
         height={500}
       />
-        <Image
-          className="rounded-full absolute object-cover size-[280px] top-[15%] right-[20%]"
-          alt=""
-          src={"/join-us/6.jpeg"}
-          width={500}
-          height={500}
-        />
+      <Image
+        className="rounded-full absolute object-cover size-[280px] top-[15%] right-[20%]"
+        alt=""
+        src={"/join-us/6.jpeg"}
+        width={500}
+        height={500}
+      />
       <Image
         className="rounded-full absolute object-cover size-[220px] top-[45%] right-[10%]"
         alt=""

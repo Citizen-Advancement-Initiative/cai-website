@@ -1,4 +1,5 @@
-import Button from "@/components/Button";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import HeroVideo from "./HeroVideo";
 
 export default function HeroSection() {
@@ -15,9 +16,12 @@ export default function HeroSection() {
           <Button className="px-10 py-5 text-sm font-medium uppercase rounded-full text-background bg-primary">
             Support us
           </Button>
-          <Button className="px-10 py-5 text-sm font-medium uppercase border rounded-full text-background border-background">
+          <Link
+            href={"/about-us"}
+            className="px-10 py-5 text-sm font-medium uppercase border rounded-full text-background border-background"
+          >
             About us
-          </Button>
+          </Link>
         </div>
       </div>
     </section>

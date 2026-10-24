@@ -80,9 +80,7 @@ export const navItems: NavItem[] = [
     label: "Gallery",
     href: "/gallery",
   },
-  {
-    label: "Get involved",
-  },
+ 
 ];
 
 export type Achievement = {
@@ -94,7 +92,7 @@ export type Achievement = {
 export const achievements: Achievement[] = [
   {
     title: "Digital disability inclusion",
-    count: 30,
+    count: 150,
     description: `Trained and supported 30 teenage girls living with disabilities to access digital skills, tools and opportunities.`,
   },
   {
