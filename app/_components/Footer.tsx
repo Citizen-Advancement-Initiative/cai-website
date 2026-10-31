@@ -1,9 +1,10 @@
 import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { IconProps } from "@radix-ui/react-icons/dist/types";
-import { ForwardRefExoticComponent, RefAttributes } from "react";
+import { ForwardRefExoticComponent, RefAttributes, Suspense } from "react";
 import { IconType } from "react-icons";
 import { FaTiktok } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import CurrentYear from "./CurrentYear";
 
 type SocialProfile = {
   link: string;
@@ -89,8 +90,11 @@ export default function Footer() {
       <section className="py-8 border-t border-background/40 w-full">
         <div className="max-w-[1400px] mx-auto flex items-center justify-between ">
           <p>
-            &copy; {new Date().getFullYear()} Citizens Advancement Initiative |
-            All rights Reserved
+            &copy;{" "}
+            <Suspense>
+              <CurrentYear />
+            </Suspense>{" "}
+            Citizens Advancement Initiative | All rights Reserved
           </p>
           <div className="flex gap-4">
             {socialProfiles.map(({ Icon, link }, idx) => (
