@@ -5,10 +5,41 @@ export type NavItem = {
 };
 export const navItems: NavItem[] = [
   {
+    label: "What we do",
+    subItems: [
+      {
+        label: "Digital Disability Inclusion",
+        href: "/what-we-do/digital-disability-inclusion",
+      },
+      {
+        label: "Women in Governance",
+        href: "/what-we-do/women-in-governance",
+      },
+      {
+        label:
+          "Sexual and Reproductive Health and Rights (SRHR) for Teenage Girls Living with Disabilities",
+        href: "/what-we-do/srhr-teenage-girls-living-with-disabilities",
+      },
+      {
+        label: "Climate Change and Environmental Sustainability",
+        href: "/what-we-do/climate-change-environmental-sustainability",
+      },
+      {
+        label: "Elections and Community Peacebuilding",
+        href: "/what-we-do/elections-community-peacebuilding",
+      },
+      {
+        label: "Research and Consultancy",
+        href: "/what-we-do/research-and-consultancy",
+      },
+    ],
+  },
+  {
     label: "Our publications",
     subItems: [
       {
         label: "Blogs",
+        href: "/our-publications/blogs",
       },
       {
         label: "Reports",
@@ -16,6 +47,7 @@ export const navItems: NavItem[] = [
       },
       {
         label: "News papers",
+        href: "/our-publications/news-papers",
       },
     ],
 

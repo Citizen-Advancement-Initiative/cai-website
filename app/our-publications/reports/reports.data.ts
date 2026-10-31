@@ -15,4 +15,8 @@ export const reportFiles = [
     fileName: "Women in Middle Level Business",
     fileUrl: "/reports/Women_in_Middle_Level_Business.pdf",
   },
+  {
+    fileName: "CAI Women in Business Systemic Corruption Magazine Report",
+    fileUrl: "/reports/CAI_Women_in_Business_Systemic_Corruption_Magazine_Report.pdf",
+  },
 ] as const;
