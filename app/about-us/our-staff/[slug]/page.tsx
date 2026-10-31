@@ -1,6 +1,12 @@
 import Image from "next/image";
 import { members } from "../our-staff.utils";
 
+export function generateStaticParams() {
+  return members.map((member) => ({
+    slug: member.name.replaceAll(" ", "-").toLowerCase(),
+  }));
+}
+
 export default async function Member({
   params,
 }: {
