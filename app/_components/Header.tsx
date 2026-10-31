@@ -23,6 +23,7 @@ export default function Header() {
   }
 
   const [selectedNavItem, setSelectedNavItem] = useState<NavItem | null>(null);
+  const [displayedNavItem, setDisplayedNavItem] = useState<NavItem | null>(null);
 
   function handleOnNavItemClick(item: NavItem) {
     if (item.subItems == undefined) {
@@ -30,8 +31,16 @@ export default function Header() {
       return;
     }
 
+    setDisplayedNavItem(item);
     setSelectedNavItem(item);
   }
+
+  useEffect(() => {
+    if (selectedNavItem) return;
+
+    const timeoutId = window.setTimeout(() => setDisplayedNavItem(null), 300);
+    return () => window.clearTimeout(timeoutId);
+  }, [selectedNavItem]);
 
   useEffect(() => {
     function handleClickOutside() {
@@ -46,14 +55,13 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "fixed z-50 inset-x-0 top-0 flex items-center  gap-6 p-6 m-4 mx-6 rounded-full backdrop-blur-md bg-white/80 text-foreground",
-        { "rounded-4xl items-start": Boolean(selectedNavItem) },
+        "fixed z-50 inset-x-0 top-0 flex items-start gap-6 p-6 m-4 mx-6 rounded-4xl backdrop-blur-md bg-white/80 text-foreground",
       )}
     >
       <Logo />
 
       <nav className="flex flex-col items-center  font-medium grow">
-        <div className="flex items-center gap-12 justify-center">
+        <div className="flex min-h-16 items-center gap-12 justify-center">
           {navItems.map((item) => (
             <button
               className="cursor-pointer"
@@ -65,28 +73,45 @@ export default function Header() {
           ))}
         </div>
 
-        {selectedNavItem && (
-          <div className="px-24 py-4 w-full">
-            {selectedNavItem.href && (
-              <Link
-                className="block mb-4 text-xl font-medium hover:underline"
-                href={selectedNavItem.href}
+        <div
+          className={cn(
+            "grid w-full transition-[grid-template-rows] duration-300 ease-in-out",
+            selectedNavItem ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+          )}
+        >
+          <div className="min-h-0 overflow-hidden">
+            {displayedNavItem && (
+              <div
+                className={cn(
+                  "w-full border-t border-border/70 px-2 py-4 transition-opacity duration-200 sm:px-8 lg:px-16 xl:px-24",
+                  selectedNavItem ? "opacity-100" : "opacity-0",
+                )}
               >
-                {selectedNavItem.label}
-              </Link>
-            )}
-
-            <ul className="flex flex-col gap-4">
-              {selectedNavItem.subItems?.map((subItem) => (
-                <li key={subItem.label}>
-                  <Link className="hover:underline" href={subItem.href ?? ""}>
-                    {subItem.label}
+                {displayedNavItem.href && (
+                  <Link
+                    className="mb-3 block text-lg font-semibold hover:underline"
+                    href={displayedNavItem.href}
+                  >
+                    {displayedNavItem.label}
                   </Link>
-                </li>
-              ))}
-            </ul>
+                )}
+
+                <ul className="flex flex-col gap-1">
+                  {displayedNavItem.subItems?.map((subItem) => (
+                    <li key={subItem.label}>
+                      <Link
+                        className="block rounded-lg px-4 py-2.5 text-sm text-muted-foreground transition-colors hover:bg-muted/70 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+                        href={subItem.href ?? ""}
+                      >
+                        {subItem.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
-        )}
+        </div>
       </nav>
 
       <div className="flex items-center gap-4">
