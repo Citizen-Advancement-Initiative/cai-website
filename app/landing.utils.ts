@@ -39,6 +39,7 @@ export const navItems: NavItem[] = [
     subItems: [
       {
         label: "Blogs",
+        href: "/our-publications/blogs",
       },
       {
         label: "Reports",
