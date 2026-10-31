@@ -26,10 +26,16 @@ Driven by a passion for inclusion and transformation, She is committed to amplif
   },
   {
     name: "Chripine Obat",
-    role: "Chief Accountant",
-    imageUrl: "/our-staff/placeholder.jpg",
+    role: "Accountant | Financial Management | Donor Grant Administration",
+    imageUrl: "/our-staff/obat.jpeg",
     category: "staff",
-    description: `N/A`,
+    description: `Chrispine Obat is an experienced accountant with extensive expertise in financial management within Public Benefit Organizations (PBOs) and donor-funded development programmes. He has a strong background in grant financial management, budget preparation and monitoring, financial planning, expenditure tracking, and donor financial reporting.
+
+As the Accountant at Citizen Advancement Initiative (CAI) since its inception, Chrispine has played a critical role in overseeing the organization’s financial operations and ensuring the effective management of donor-funded grants. His responsibilities include financial planning, budget oversight, grant expenditure monitoring, financial accountability, and the preparation of accurate and timely financial reports in line with donor requirements and organizational policies.
+
+Throughout his tenure at CAI, Chrispine has supported the financial administration of multiple donor-funded projects, contributing to sound financial management practices, transparency, and accountability in the utilization of grant resources. His experience in managing diverse grants has strengthened the organization’s financial systems and supported positive financial management assessments and reporting outcomes.
+
+Chrispine brings a strong commitment to financial integrity, prudent resource management, and compliance with donor financial regulations. His expertise contributes to CAI’s institutional sustainability and its capacity to effectively implement development programmes while maintaining high standards of financial accountability and responsible stewardship of donor resources.`,
   },
   {
     name: "Rose Oketch",
