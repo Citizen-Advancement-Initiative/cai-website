@@ -62,7 +62,7 @@ export default function Header() {
         "fixed top-0 z-50 w-full p-6 transition-all duration-300 h-fit",
       )}
     >
-      <nav className="bg-background p-4 rounded-4xl flex flex-col">
+      <nav className="bg-white/80 p-4 rounded-4xl flex flex-col backdrop-blur-sm">
         <section className=" flex justify-between items-center">
           <Logo />
 
