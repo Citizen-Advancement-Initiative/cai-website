@@ -16,7 +16,7 @@ export default function Text({
       return (
         <h2
           className={cn(
-            "mb-12 text-5xl font-medium capitalize underline underline-offset-20 decoration-primary",
+            "mb-12 w-fit max-w-full border-b-4 border-primary pb-4 text-5xl font-medium capitalize",
             className,
           )}
         >

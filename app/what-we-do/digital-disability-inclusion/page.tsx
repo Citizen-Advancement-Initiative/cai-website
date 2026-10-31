@@ -5,8 +5,8 @@ import Text from "@/components/Text";
 
 export default function DigitalDisabilityInclusion() {
   return (
-    <Main>
-      <CenteredSection className="gap-8 items-center h-[70vh] justify-center grid grid-cols-2">
+    <Main className="">
+      <CenteredSection className="gap-8 items-center h-[70vh] justify-center grid grid-cols-2 mt-[10%]">
         <div>
           <Text variant="heading">Digital Disability Inclusion </Text>
           <Text>

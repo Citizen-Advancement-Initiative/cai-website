@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function FoundationHistory() {
   return (
     <Main>
-      <section className="max-w-[1400px] mx-auto  grid grid-cols-2 min-h-screen mb-6 items-center gap-10 mt-24">
+      <section className="max-w-[1400px] mt-[10%] mx-auto  grid grid-cols-2 min-h-screen mb-6 items-center gap-10 mt-24">
         <div className="flex flex-col justify-center">
           <h2 className="mb-12 text-5xl font-medium capitalize underline underline-offset-20 decoration-primary">
             A Brief History
