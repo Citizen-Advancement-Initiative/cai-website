@@ -15,6 +15,7 @@ export default function Home() {
       <Suspense fallback={null}>
         <InfoModal />
       </Suspense>
+
       <HeroSection />
 
       <InfoSection />
@@ -47,14 +48,7 @@ export default function Home() {
           <span>Matters</span>
         </p>
 
-        <div className="flex gap-4">
-          <Button className="px-10 py-5 text-sm font-medium uppercase rounded-full  text-background bg-primary">
-            Support us
-          </Button>
-          <Button className="px-10 py-5 text-sm font-medium uppercase border rounded-full  text-foreground border-foreground">
-            About us
-          </Button>
-        </div>
+       
       </section>
 
       <CarouselSection />

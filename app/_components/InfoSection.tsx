@@ -98,14 +98,7 @@ export default function InfoSection() {
         ))}
       </div>
 
-      <div className="flex gap-4 mx-auto mt-16 items-center justify-center">
-        <Button className=" rounded-full text-sm font-medium px-10 py-5 uppercase text-background bg-primary">
-          Get involved
-        </Button>
-        <Button className=" rounded-full text-sm font-medium px-10 py-5 uppercase text-foreground border border-foreground ">
-          About us
-        </Button>
-      </div>
+     
     </section>
   );
 }

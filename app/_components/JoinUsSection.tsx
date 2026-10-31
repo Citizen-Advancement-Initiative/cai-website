@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function JoinUsSection() {
   return (
@@ -14,18 +14,14 @@ export default function JoinUsSection() {
       </h2>
 
       <div className="flex gap-6 mx-auto items-center justify-center">
-        <Button className=" rounded-full text-sm font-medium px-10 py-5 uppercase text-background bg-primary">
-          Get involved
-        </Button>
-
         <div className="flex gap-2 items-center">
           <p className="text-sm font-medium uppercase text-foreground ">
             Learn More
           </p>
 
-          <a className="border rounded-full p-4 border-foreground/30" href="">
+          <Link className="border rounded-full p-4 border-foreground/30" href="/about-us">
             <ArrowUpRightIcon className="size-4" />
-          </a>
+          </Link>
         </div>
       </div>
 
