@@ -111,65 +111,65 @@ export const achievements: Achievement[] = [
 ];
 export const cardInfos = [
   {
-    title: "Ut enim ad",
+    title: "Ideas for inclusive change",
     description:
-      "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.",
+      "Voices from across our programmes share ideas and expertise to advance inclusive governance and community-led change.",
     imageUrl: "/info/5.jpeg",
   },
   {
-    title: "Sed ut perspiciatis",
+    title: "Women shaping civic spaces",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.",
+      "Her Impact equips professional women with the skills, networks, and platforms to influence governance and decision-making.",
     imageUrl: "/info/3.jpeg",
   },
   {
-    title: "Lorem ipsum dolor",
+    title: "Digital skills, greater access",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac neque vel justo accumsan gravida.",
+      "We help learners with disabilities build digital skills and access technology, creating more inclusive opportunities to learn and participate.",
     imageUrl: "/info/1.jpeg",
   },
   {
-    title: "Consectetur adipiscing",
+    title: "Every learner belongs",
     description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+      "Digital inclusion is about ability, not barriers. We support learners with disabilities to develop skills and take part in the digital world.",
     imageUrl: "/info/2.jpeg",
   },
 
   {
-    title: "At vero eos",
+    title: "Dialogue that moves us forward",
     description:
-      "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
+      "Through dialogue and shared learning, we bring community perspectives into conversations about leadership, accountability, and social change.",
     imageUrl: "/info/4.jpeg",
   },
 
   {
-    title: "Nemo enim ipsam",
+    title: "Stronger through partnership",
     description:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+      "We bring women, communities, and institutions together to advance women's leadership and more inclusive participation.",
     imageUrl: "/info/6.jpeg",
   },
   {
-    title: "Neque porro quisquam",
+    title: "Inspire. Empower. Influence.",
     description:
-      "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+      "Through Her Impact, women strengthen their leadership, build supportive networks, and grow their influence in civic spaces.",
     imageUrl: "/info/7.jpeg",
   },
   {
-    title: "Quis autem vel",
+    title: "A place for every perspective",
     description:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Community dialogue creates space for different perspectives and helps people work together on the issues shaping their lives.",
     imageUrl: "/info/8.jpeg",
   },
   {
-    title: "Excepteur sint occaecat",
+    title: "Women leading change",
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "We support women to contribute to decisions and shape public life, making governance more representative and inclusive.",
     imageUrl: "/info/9.jpeg",
   },
   {
-    title: "Duis aute irure",
+    title: "Leadership with lasting influence",
     description:
-      "Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra.",
+      "Learning, connection, and collective action help women turn their leadership into meaningful influence in governance.",
     imageUrl: "/info/10.jpeg",
   },
 ];
