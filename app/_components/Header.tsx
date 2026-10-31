@@ -54,15 +54,20 @@ export default function Header() {
     return () => document.removeEventListener("click", handleClickOutside);
   });
 
-  const isInHomePage = location.pathname === "/";
-
   return (
     <header
       className={cn(
-        "fixed top-0 z-50 w-full p-6 transition-all duration-300 h-fit",
+        "fixed top-0 z-50 w-full py-6 px-16 transition-all duration-300 h-fit",
       )}
     >
-      <nav className="bg-white/80 p-4 rounded-4xl flex flex-col backdrop-blur-sm">
+      <nav
+        className={cn(
+          "bg-white/75 p-4 rounded-4xl flex flex-col backdrop-blur-sm transition-colors duration-300",
+          {
+            "bg-white": Boolean(selectedNavItem),
+          },
+        )}
+      >
         <section className=" flex justify-between items-center">
           <Logo />
 
