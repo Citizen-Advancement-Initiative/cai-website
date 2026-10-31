@@ -23,7 +23,9 @@ export default function Header() {
   }
 
   const [selectedNavItem, setSelectedNavItem] = useState<NavItem | null>(null);
-  const [displayedNavItem, setDisplayedNavItem] = useState<NavItem | null>(null);
+  const [displayedNavItem, setDisplayedNavItem] = useState<NavItem | null>(
+    null,
+  );
 
   function handleOnNavItemClick(item: NavItem) {
     if (item.subItems == undefined) {
@@ -52,30 +54,49 @@ export default function Header() {
     return () => document.removeEventListener("click", handleClickOutside);
   });
 
+  const isInHomePage = location.pathname === "/";
+
   return (
     <header
       className={cn(
-        "fixed z-50 inset-x-0 top-0 flex items-start gap-6 p-6 m-4 mx-6 rounded-4xl backdrop-blur-md bg-white/80 text-foreground",
+        "fixed top-0 z-50 w-full p-6 transition-all duration-300 h-fit",
       )}
     >
-      <Logo />
+      <nav className="bg-background p-4 rounded-4xl flex flex-col">
+        <section className=" flex justify-between items-center">
+          <Logo />
 
-      <nav className="flex flex-col items-center  font-medium grow">
-        <div className="flex min-h-16 items-center gap-12 justify-center">
-          {navItems.map((item) => (
-            <button
-              className="cursor-pointer"
-              onClick={() => handleOnNavItemClick(item)}
-              key={item.label}
+          <div className=" flex items-center gap-6 ">
+            {navItems.map((item) => (
+              <button
+                className="cursor-pointer"
+                onClick={() => handleOnNavItemClick(item)}
+                key={item.label}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+
+          <div className="flex gap-4">
+            <Button
+              onClick={() => openInfoModal(InfoModalType.GetInvolved)}
+              className="px-6 py-6 text-xs uppercase rounded-full"
             >
-              {item.label}
-            </button>
-          ))}
-        </div>
+              Get Involved
+            </Button>
+            <Button
+              onClick={() => openInfoModal(InfoModalType.SupportUs)}
+              className="px-6 py-6 text-xs uppercase rounded-full "
+            >
+              Support us
+            </Button>
+          </div>
+        </section>
 
-        <div
+        <section
           className={cn(
-            "grid w-full transition-[grid-template-rows] duration-300 ease-in-out",
+            "grid w-2/3 mx-auto transition-[grid-template-rows] duration-300 ease-in-out",
             selectedNavItem ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
           )}
         >
@@ -95,7 +116,6 @@ export default function Header() {
                     {displayedNavItem.label}
                   </Link>
                 )}
-
                 <ul className="flex flex-col gap-1">
                   {displayedNavItem.subItems?.map((subItem) => (
                     <li key={subItem.label}>
@@ -111,23 +131,8 @@ export default function Header() {
               </div>
             )}
           </div>
-        </div>
+        </section>
       </nav>
-
-      <div className="flex items-center gap-4">
-        <Button
-          onClick={() => openInfoModal(InfoModalType.GetInvolved)}
-          className="px-6 py-6 text-xs uppercase rounded-full"
-        >
-          Get Involved
-        </Button>
-        <Button
-          onClick={() => openInfoModal(InfoModalType.SupportUs)}
-          className="px-6 py-6 text-xs uppercase rounded-full "
-        >
-          Support us
-        </Button>
-      </div>
     </header>
   );
 }

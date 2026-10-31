@@ -89,7 +89,8 @@ export default function Footer() {
       <section className="py-8 border-t border-background/40 w-full">
         <div className="max-w-[1400px] mx-auto flex items-center justify-between ">
           <p>
-            &copy; 2025 Citizens Advancement Initiative | All rights Reserved
+            &copy; {new Date().getFullYear()} Citizens Advancement Initiative |
+            All rights Reserved
           </p>
           <div className="flex gap-4">
             {socialProfiles.map(({ Icon, link }, idx) => (

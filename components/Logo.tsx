@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Logo() {
   return (
     <Link href={"/"}>
-      <Image width={200} height={20} src={caiWebsiteLogo} alt="Website logo" />
+      <Image width={200} height={20} src={caiWebsiteLogo} alt="Website logo" className="block" />
     </Link>
   );
 }
