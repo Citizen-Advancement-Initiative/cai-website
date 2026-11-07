@@ -24,11 +24,11 @@ function GalleryImage({
       ref={ref}
       onClick={onClick}
       className={cn(
-        "h-[350px] object-cover object-center cursor-pointer hover:scale-[102%] duration-700 transition-all translate-y-[10%] opacity-0 ",
+        "h-52 w-full cursor-pointer translate-y-[10%] object-cover object-center opacity-0 transition-all duration-700 hover:scale-[102%] sm:h-[350px]",
         {
-          "col-span-2": idx % 6 === 0 || idx % 6 === 5,
-          "col-span-4": idx % 6 === 1 || idx % 6 === 3,
-          "col-span-3": idx % 6 === 2 || idx % 6 === 4,
+          "sm:col-span-2": idx % 6 === 0 || idx % 6 === 5,
+          "sm:col-span-4": idx % 6 === 1 || idx % 6 === 3,
+          "sm:col-span-3": idx % 6 === 2 || idx % 6 === 4,
           "opacity-100 translate-y-0": isInView,
         },
       )}
@@ -46,12 +46,12 @@ export default function Gallery() {
 
   return (
     <Main>
-      <section className="mt-[15vh] max-w-[1500px] mx-auto mb-24">
-        <h2 className="mb-12 text-5xl font-medium underline capitalize underline-offset-20 decoration-primary">
+      <section className="mx-auto mb-16 mt-28 max-w-[1500px] px-5 sm:mb-24 sm:px-8">
+        <h2 className="mb-8 text-4xl font-medium capitalize underline underline-offset-8 decoration-primary sm:mb-12 sm:text-5xl sm:underline-offset-20">
           Gallery
         </h2>
 
-        <div className="grid grid-cols-9 gap-4">
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-9 sm:gap-4">
           {imageUrls.map((url, idx) => (
             <GalleryImage
               url={url}

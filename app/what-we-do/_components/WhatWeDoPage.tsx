@@ -13,17 +13,17 @@ export default function WhatWeDoPage({
 }: WhatWeDoPageProps) {
   return (
     <Main>
-      <section className="mx-auto mt-[10%] mb-6 grid min-h-screen max-w-[1400px] grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
+      <section className="mx-auto mb-6 mt-24 grid min-h-[80svh] max-w-[1400px] grid-cols-1 items-center gap-8 px-5 py-10 sm:px-8 md:grid-cols-2 md:gap-10">
         <div className="flex flex-col justify-center">
-          <h1 className="mb-8 w-fit max-w-full border-b-4 border-primary pb-4 text-5xl font-medium capitalize">
+          <h1 className="mb-6 w-fit max-w-full border-b-4 border-primary pb-3 text-3xl font-medium capitalize sm:mb-8 sm:pb-4 sm:text-5xl">
             {title}
           </h1>
           {subtitle && (
-            <h2 className="mb-6 text-3xl font-medium">{subtitle}</h2>
+            <h2 className="mb-6 text-2xl font-medium sm:text-3xl">{subtitle}</h2>
           )}
           {paragraphs.map((paragraph) => (
             <p
-              className="mb-2 text-2xl text-foreground/60"
+              className="mb-3 text-base text-foreground/60 sm:text-xl"
               key={paragraph}
             >
               {paragraph}

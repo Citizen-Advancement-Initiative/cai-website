@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
@@ -36,33 +35,33 @@ export default function InfoSection() {
   }
 
   return (
-    <section className="min-h-screen px-12 py-8">
-      <h2 className="mt-32 text-6xl font-bold text-center uppercase">
+    <section className="min-h-screen px-5 py-12 sm:px-8 lg:px-12">
+      <h2 className="mt-20 text-center text-4xl font-bold uppercase sm:mt-32 sm:text-5xl lg:text-6xl">
         Hear our <span className="text-primary">Stories</span>
       </h2>
 
-      <p className="text-center text-foreground/70 mt-6 max-w-[60ch] mx-auto">
+      <p className="mx-auto mt-6 max-w-[60ch] text-center text-sm text-foreground/70 sm:text-base">
         We respond to the limited collective engagement of special interest
         groups in governance, sustainable development, and social justice in
         Kenya & Uganda.
       </p>
 
-      <div className="flex justify-between gap-4 mt-20 overflow-x-hidden ">
+      <div className="mt-10 flex snap-x snap-mandatory justify-start gap-3 overflow-x-auto pb-4 sm:mt-20 sm:justify-between sm:gap-4 sm:overflow-x-hidden">
         {cardInfos.map((info, idx) => (
           <article
             onMouseEnter={() => handleMouseEnter(idx)}
             onMouseLeave={handleMouseLeave}
             className={cn(
-              "relative flex-none overflow-hidden rounded-4xl h-[400px] w-[140px] transition-[width] duration-300",
+              "relative h-[340px] w-[82vw] max-w-[400px] flex-none snap-center overflow-hidden rounded-4xl transition-[width] duration-300 sm:h-[400px] sm:w-[140px]",
               {
-                "w-[400px]": activeIndex === idx,
+                "sm:w-[400px]": activeIndex === idx,
               },
             )}
             key={info.title}
           >
             <Link
               className={cn(
-                "absolute p-2 bg-background/20 right-6 top-6 z-20 rounded-full transition-opacity duration-300",
+                "absolute right-4 top-4 z-20 rounded-full bg-background/20 p-2 transition-opacity duration-300 sm:right-6 sm:top-6",
                 {
                   "opacity-0": activeIndex !== idx,
                 },
@@ -81,7 +80,7 @@ export default function InfoSection() {
 
             <div
               className={cn(
-                "absolute inset-0 bottom-0 z-10 flex flex-col p-8 bg-black/30 transition-opacity duration-300",
+                "absolute inset-0 bottom-0 z-10 flex flex-col bg-black/30 p-5 transition-opacity duration-300 sm:p-8",
                 {
                   "opacity-0": activeIndex !== idx,
                 },

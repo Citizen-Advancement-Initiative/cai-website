@@ -4,16 +4,16 @@ import Link from "next/link";
 
 export default function JoinUsSection() {
   return (
-    <section className="h-screen flex flex-col justify-center items-center gap-10 relative">
+    <section className="relative flex min-h-[680px] items-center justify-center gap-8 overflow-hidden px-5 py-20 sm:min-h-screen sm:gap-10">
       <p className="uppercase font-medium bg-primary/10 px-3 py-2.5 text-xs rounded-lg">
         Take action
       </p>
 
-      <h2 className="text-6xl font-bold capitalize max-w-[16ch] text-center leading-20">
+      <h2 className="z-10 max-w-[16ch] text-center text-4xl font-bold capitalize leading-tight sm:text-5xl lg:text-6xl">
         Join us in making a difference
       </h2>
 
-      <div className="flex gap-6 mx-auto items-center justify-center">
+      <div className="z-10 mx-auto flex items-center justify-center gap-6">
         <div className="flex gap-2 items-center">
           <p className="text-sm font-medium uppercase text-foreground ">
             Learn More
@@ -26,42 +26,42 @@ export default function JoinUsSection() {
       </div>
 
       <Image
-        className="rounded-full absolute object-cover size-[120px] top-[15%] left-[20%]"
+        className="absolute left-[5%] top-[10%] size-16 rounded-full object-cover sm:left-[20%] sm:top-[15%] sm:size-[120px]"
         alt=""
         src={"/join-us/1.jpeg"}
         width={500}
         height={500}
       />
       <Image
-        className="rounded-full absolute object-cover size-[220px] top-[40%] left-[10%]"
+        className="absolute left-[2%] top-[38%] size-24 rounded-full object-cover sm:left-[10%] sm:size-[220px]"
         alt=""
         src={"/join-us/2.jpeg"}
         width={500}
         height={500}
       />
       <Image
-        className="rounded-full absolute object-cover size-[280px] bottom-[5%] left-[20%]"
+        className="absolute bottom-[5%] left-[8%] size-28 rounded-full object-cover sm:left-[20%] sm:size-[280px]"
         alt=""
         src={"/join-us/3.jpeg"}
         width={500}
         height={500}
       />
       <Image
-        className="rounded-full absolute object-cover size-[280px] top-[15%] right-[20%]"
+        className="absolute right-[5%] top-[12%] size-24 rounded-full object-cover sm:right-[20%] sm:size-[280px]"
         alt=""
         src={"/join-us/6.jpeg"}
         width={500}
         height={500}
       />
       <Image
-        className="rounded-full absolute object-cover size-[220px] top-[45%] right-[10%]"
+        className="absolute right-[2%] top-[42%] size-20 rounded-full object-cover sm:right-[10%] sm:size-[220px]"
         alt=""
         src={"/join-us/5.jpeg"}
         width={500}
         height={500}
       />
       <Image
-        className="rounded-full absolute object-cover size-[120px] bottom-[10%] right-[20%]"
+        className="absolute bottom-[8%] right-[8%] size-16 rounded-full object-cover sm:right-[20%] sm:size-[120px]"
         alt=""
         src={"/join-us/1.jpeg"}
         width={500}

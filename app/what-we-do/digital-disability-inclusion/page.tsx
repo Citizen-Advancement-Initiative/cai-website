@@ -6,7 +6,7 @@ import Text from "@/components/Text";
 export default function DigitalDisabilityInclusion() {
   return (
     <Main className="">
-      <CenteredSection className="gap-8 items-center h-[70vh] justify-center grid grid-cols-2 mt-[10%]">
+      <CenteredSection className="mt-24 grid min-h-[70svh] grid-cols-1 items-center justify-center gap-8 py-10 md:grid-cols-2">
         <div>
           <Text variant="heading">Digital Disability Inclusion </Text>
           <Text>
@@ -17,7 +17,7 @@ export default function DigitalDisabilityInclusion() {
           </Text>
         </div>
         <video
-          className="shadow-[16px_16px_0px_0px_var(--color-secondary)] rounded-2xl h-[600px] w-[500px] object-cover"
+          className="aspect-video h-auto w-full rounded-2xl object-cover shadow-[10px_10px_0px_0px_var(--color-secondary)] sm:shadow-[16px_16px_0px_0px_var(--color-secondary)] md:aspect-[5/6]"
           loop
           autoPlay
           src={"/digital-disability-inclusion/dsi-hero.mp4"}

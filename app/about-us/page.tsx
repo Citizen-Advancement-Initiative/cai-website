@@ -7,19 +7,19 @@ import { foundations, values } from "./about-us.constants";
 export default function AboutUs() {
   return (
     <Main className="mb-32">
-      <section className="max-w-[1400px] mx-auto  grid grid-cols-2 h-screen items-center gap-10">
+      <section className="mx-auto grid min-h-[80svh] max-w-[1400px] grid-cols-1 items-center gap-8 px-5 pb-12 pt-28 sm:px-8 md:grid-cols-2 md:gap-10">
         <div className="flex flex-col justify-center">
-          <h2 className="mb-12 text-5xl font-medium underline capitalize underline-offset-20 decoration-primary">
+          <h2 className="mb-8 text-4xl font-medium underline capitalize underline-offset-8 decoration-primary sm:mb-12 sm:text-5xl sm:underline-offset-20">
             About Us
           </h2>
-          <p className="mb-2 text-2xl text-foreground/60">
+          <p className="mb-2 text-lg text-foreground/60 sm:text-2xl">
             We Support Women Entrepreneurs, Young Female Leaders, Professional
             Women and Teen Age girls living with disability
           </p>
         </div>
 
         <Image
-          className="shadow-[16px_16px_0px_0px_var(--color-secondary)] rounded-2xl"
+          className="h-auto w-full rounded-2xl object-cover shadow-[10px_10px_0px_0px_var(--color-secondary)] sm:shadow-[16px_16px_0px_0px_var(--color-secondary)]"
           height={1000}
           width={1000}
           src={"/about-us/foundation-history.jpeg"}
@@ -27,19 +27,19 @@ export default function AboutUs() {
         />
       </section>
 
-      <section className="max-w-[1400px] mx-auto mb-32 ">
-        <h3 className="mb-12 text-4xl font-medium capitalize border-t-2  w-fit border-secondary pt-2">
+      <section className="mx-auto mb-20 max-w-[1400px] px-5 sm:mb-32 sm:px-8">
+        <h3 className="mb-8 w-fit border-t-2 border-secondary pt-2 text-3xl font-medium capitalize sm:mb-12 sm:text-4xl">
           Our values
         </h3>
 
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {values.map((value) => (
             <ValueCard key={value.title} value={value} />
           ))}
         </div>
       </section>
 
-      <section className="max-w-[1400px] mx-auto">
+      <section className="mx-auto max-w-[1400px] px-5 sm:px-8">
         {foundations.map((foundation, idx) => (
           <FoundationCard
             key={foundation.title}

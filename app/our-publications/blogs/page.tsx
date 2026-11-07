@@ -4,11 +4,11 @@ import { blogPosts } from "./blogs.data";
 
 export default function Blogs() {
   return (
-    <Main className="pt-[10%]">
-      <section className="max-w-[1400px] mx-auto">
+    <Main className="px-5 pt-28 sm:px-8 sm:pt-36">
+      <section className="mx-auto max-w-[1400px]">
         <Text variant="heading">Blogs</Text>
 
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
           {blogPosts.map((blogPost) => (
             <a
               key={blogPost.url}

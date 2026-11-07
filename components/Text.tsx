@@ -16,7 +16,7 @@ export default function Text({
       return (
         <h2
           className={cn(
-            "mb-12 w-fit max-w-full border-b-4 border-primary pb-4 text-5xl font-medium capitalize",
+            "mb-8 w-fit max-w-full border-b-4 border-primary pb-3 text-3xl font-medium capitalize sm:mb-12 sm:pb-4 sm:text-5xl",
             className,
           )}
         >
@@ -28,7 +28,7 @@ export default function Text({
       return (
         <h3
           className={cn(
-            "mb-12 text-4xl font-medium capitalize border-t-2  w-fit border-secondary pt-2",
+            "mb-8 w-fit border-t-2 border-secondary pt-2 text-2xl font-medium capitalize sm:mb-12 sm:text-4xl",
             className,
           )}
         >
@@ -38,7 +38,7 @@ export default function Text({
 
     default:
       return (
-        <p className={cn("text-2xl text-foreground/60", className)}>
+        <p className={cn("text-base text-foreground/60 sm:text-2xl", className)}>
           {children}
         </p>
       );

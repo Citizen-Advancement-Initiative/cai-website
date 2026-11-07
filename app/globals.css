@@ -124,6 +124,12 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: clip;
+  }
+  img,
+  video,
+  iframe {
+    max-width: 100%;
   }
   html {
     @apply font-sans;

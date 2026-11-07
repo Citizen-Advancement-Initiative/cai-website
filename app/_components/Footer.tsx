@@ -38,65 +38,65 @@ const socialProfiles: SocialProfile[] = [
 
 export default function Footer() {
   return (
-    <footer className="h-[70vh] bg-black text-background pt-20  flex flex-col">
-      <div className="max-w-[1400px] mx-auto grid grid-cols-4 gap-16 grow">
+    <footer className="flex flex-col bg-black px-5 pt-14 text-background sm:px-8 sm:pt-20">
+      <div className="mx-auto grid w-full max-w-[1400px] grow grid-cols-1 gap-10 pb-12 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 lg:gap-16">
         <section className="">
-          <p className="text-2xl uppercase underline underline-offset-8 decoration-primary">
+          <p className="text-xl uppercase underline underline-offset-8 decoration-primary sm:text-2xl">
             What we do
           </p>
-          <p className="mt-8 text-background/70 text-lg">
+          <p className="mt-5 text-base text-background/70 sm:mt-8 sm:text-lg">
             We Help female professionals & entrepreneurs in governance,
             development and social justice in Kenya and Uganda.
           </p>
         </section>
 
         <section className="">
-          <p className="text-2xl uppercase underline underline-offset-8 decoration-primary">
+          <p className="text-xl uppercase underline underline-offset-8 decoration-primary sm:text-2xl">
             Contact us
           </p>
-          <p className="mt-8 text-background/70 text-lg">
+          <p className="mt-5 text-base text-background/70 sm:mt-8 sm:text-lg">
             <span className="font-medium">Phone: </span>{" "}
             <span>+254 729 473 996</span>
           </p>
-          <p className="mt-4 text-background/70 text-lg">
+          <p className="mt-4 text-base text-background/70 sm:text-lg">
             <span className="font-medium">Email: </span>{" "}
             <span>+info@cai.or.ke</span>
           </p>
-          <p className="mt-4 text-background/70 text-lg">
+          <p className="mt-4 text-base text-background/70 sm:text-lg">
             <span className="font-medium">Office: </span>{" "}
             <span>Hurlingham Argwings Khodek Nairobi Kenya</span>
           </p>
         </section>
 
         <section className="">
-          <p className="text-2xl uppercase underline underline-offset-8 decoration-primary">
+          <p className="text-xl uppercase underline underline-offset-8 decoration-primary sm:text-2xl">
             Get involved
           </p>
 
-          <p className="mt-8 text-background/70 text-lg">Donate </p>
-          <p className="mt-4 text-background/70 text-lg">Partner </p>
-          <p className="mt-4 text-background/70 text-lg">Resources </p>
-          <p className="mt-4 text-background/70 text-lg">Attend an event </p>
-          <p className="mt-4 text-background/70 text-lg">Empower</p>
+          <p className="mt-5 text-base text-background/70 sm:mt-8 sm:text-lg">Donate </p>
+          <p className="mt-4 text-base text-background/70 sm:text-lg">Partner </p>
+          <p className="mt-4 text-base text-background/70 sm:text-lg">Resources </p>
+          <p className="mt-4 text-base text-background/70 sm:text-lg">Attend an event </p>
+          <p className="mt-4 text-base text-background/70 sm:text-lg">Empower</p>
         </section>
 
         <section className="">
-          <p className="text-2xl uppercase underline underline-offset-8 decoration-primary">
+          <p className="text-xl uppercase underline underline-offset-8 decoration-primary sm:text-2xl">
             Blogs
           </p>
         </section>
       </div>
 
-      <section className="py-8 border-t border-background/40 w-full">
-        <div className="max-w-[1400px] mx-auto flex items-center justify-between ">
-          <p>
+      <section className="w-full border-t border-background/40 py-6 sm:py-8">
+        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm sm:text-base">
             &copy;{" "}
             <Suspense>
               <CurrentYear />
             </Suspense>{" "}
             Citizens Advancement Initiative | All rights Reserved
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-3">
             {socialProfiles.map(({ Icon, link }, idx) => (
               <a
                 className="p-3 border rounded-full border-foreground/20"

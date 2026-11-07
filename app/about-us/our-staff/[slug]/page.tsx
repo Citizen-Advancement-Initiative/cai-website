@@ -20,16 +20,16 @@ export default async function Member({
 
   return (
     <main className="min-h-screen mb-16">
-      <section className="flex mt-[20vh] max-w-[1400px] mx-auto items-end justify-center gap-16">
-        <div className="mb-16">
-          <h2 className="mb-8 text-5xl font-medium capitalize underline underline-offset-20 decoration-primary">
+      <section className="mx-auto mt-28 flex max-w-[1400px] flex-col items-center gap-8 px-5 sm:mt-36 sm:px-8 md:flex-row md:items-end md:justify-center md:gap-16">
+        <div className="md:mb-16">
+          <h2 className="mb-6 text-4xl font-medium capitalize underline underline-offset-8 decoration-primary sm:mb-8 sm:text-5xl sm:underline-offset-20">
             {member?.name}
           </h2>
-          <p className="text-2xl mt-4 text-foreground/50">{member?.role}</p>
+          <p className="mt-4 text-lg text-foreground/50 sm:text-2xl">{member?.role}</p>
         </div>
 
         <Image
-          className="shadow-[16px_16px_0px_0px_var(--color-primary)] rounded-2xl w-[400px] h-[500px] object-cover"
+          className="h-auto max-h-[500px] w-full max-w-[400px] rounded-2xl object-cover shadow-[10px_10px_0px_0px_var(--color-primary)] sm:shadow-[16px_16px_0px_0px_var(--color-primary)]"
           height={1000}
           width={1000}
           src={member?.imageUrl ?? ""}
@@ -37,8 +37,8 @@ export default async function Member({
         />
       </section>
 
-      <section className="max-w-[800px] mx-auto mt-20">
-        <p className="text-2xl text-foreground/80 whitespace-pre-line">
+      <section className="mx-auto mt-12 max-w-[800px] px-5 sm:mt-20 sm:px-8">
+        <p className="whitespace-pre-line text-lg text-foreground/80 sm:text-2xl">
           {member?.description || ""}
         </p>
       </section>

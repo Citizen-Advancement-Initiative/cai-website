@@ -7,13 +7,15 @@ import {
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
 import { cn } from "cn";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NavItem, navItems } from "../landing.utils";
 
 export default function Header() {
   const router = useRouter();
+  const headerRef = useRef<HTMLElement>(null);
 
   function openInfoModal(type: InfoModalType) {
     const urlSearchParams = new URLSearchParams();
@@ -26,15 +28,17 @@ export default function Header() {
   const [displayedNavItem, setDisplayedNavItem] = useState<NavItem | null>(
     null,
   );
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   function handleOnNavItemClick(item: NavItem) {
     if (item.subItems == undefined) {
       router.push(item.href ?? "/");
+      setIsMobileMenuOpen(false);
       return;
     }
 
     setDisplayedNavItem(item);
-    setSelectedNavItem(item);
+    setSelectedNavItem((selected) => (selected === item ? null : item));
   }
 
   useEffect(() => {
@@ -45,19 +49,26 @@ export default function Header() {
   }, [selectedNavItem]);
 
   useEffect(() => {
-    function handleClickOutside() {
-      if (selectedNavItem) setSelectedNavItem(null);
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        selectedNavItem &&
+        headerRef.current &&
+        !headerRef.current.contains(event.target as Node)
+      ) {
+        setSelectedNavItem(null);
+      }
     }
 
     document.addEventListener("click", handleClickOutside);
 
     return () => document.removeEventListener("click", handleClickOutside);
-  });
+  }, [selectedNavItem]);
 
   return (
     <header
+      ref={headerRef}
       className={cn(
-        "fixed top-0 z-50 w-full py-6 px-16 transition-all duration-300 h-fit",
+        "fixed top-0 z-50 w-full px-3 py-3 transition-all duration-300 sm:px-6 sm:py-4 lg:px-16 lg:py-6",
       )}
     >
       <nav
@@ -68,10 +79,10 @@ export default function Header() {
           },
         )}
       >
-        <section className=" flex justify-between items-center">
+        <section className="flex items-center justify-between gap-3">
           <Logo />
 
-          <div className=" flex items-center gap-6 ">
+          <div className="hidden items-center gap-4 lg:flex xl:gap-6">
             {navItems.map((item) => (
               <button
                 className="cursor-pointer"
@@ -83,7 +94,7 @@ export default function Header() {
             ))}
           </div>
 
-          <div className="flex gap-4">
+          <div className="hidden gap-4 lg:flex">
             <Button
               onClick={() => openInfoModal(InfoModalType.GetInvolved)}
               className="px-6 py-6 text-xs uppercase rounded-full"
@@ -97,11 +108,95 @@ export default function Header() {
               Support us
             </Button>
           </div>
+
+          <button
+            type="button"
+            className="flex size-11 shrink-0 items-center justify-center rounded-full border border-foreground/10 lg:hidden"
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setIsMobileMenuOpen((open) => !open)}
+          >
+            {isMobileMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+          </button>
         </section>
+
+        {isMobileMenuOpen && (
+          <section
+            id="mobile-navigation"
+            className="mt-3 border-t border-border/70 pt-3 lg:hidden"
+          >
+            <nav aria-label="Mobile navigation" className="flex flex-col">
+              {navItems.map((item) => (
+                <div key={item.label}>
+                  <button
+                    type="button"
+                    className="flex min-h-11 w-full items-center justify-between rounded-lg px-3 text-left"
+                    aria-expanded={selectedNavItem === item}
+                    onClick={() => handleOnNavItemClick(item)}
+                  >
+                    {item.label}
+                    {item.subItems && (
+                      <span aria-hidden="true">
+                        {selectedNavItem === item ? "−" : "+"}
+                      </span>
+                    )}
+                  </button>
+                  {selectedNavItem === item && item.subItems && (
+                    <ul className="mb-2 ml-3 flex flex-col border-l border-border/70 pl-3">
+                      {item.href && (
+                        <li>
+                          <Link
+                            className="block rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-muted/70"
+                            href={item.href}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {item.label} overview
+                          </Link>
+                        </li>
+                      )}
+                      {item.subItems.map((subItem) => (
+                        <li key={subItem.label}>
+                          <Link
+                            className="block rounded-lg px-3 py-2.5 text-sm text-muted-foreground hover:bg-muted/70 hover:text-foreground"
+                            href={subItem.href ?? "/"}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {subItem.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+              <div className="mt-3 grid grid-cols-2 gap-2">
+                <Button
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    openInfoModal(InfoModalType.GetInvolved);
+                  }}
+                  className="min-h-11 rounded-full px-3 text-xs uppercase"
+                >
+                  Get Involved
+                </Button>
+                <Button
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    openInfoModal(InfoModalType.SupportUs);
+                  }}
+                  className="min-h-11 rounded-full px-3 text-xs uppercase"
+                >
+                  Support us
+                </Button>
+              </div>
+            </nav>
+          </section>
+        )}
 
         <section
           className={cn(
-            "grid w-2/3 mx-auto transition-[grid-template-rows] duration-300 ease-in-out",
+            "hidden mx-auto w-full max-w-3xl transition-[grid-template-rows] duration-300 ease-in-out lg:grid",
             selectedNavItem ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
           )}
         >

@@ -40,7 +40,7 @@ export default function HeroVideo() {
         <source src="/videos/hero-video.mp4" type="video/mp4" />
       </video>
 
-      <div className="absolute right-16 top-[14%] flex flex-col gap-4 z-20">
+      <div className="absolute right-4 top-[18%] z-20 flex flex-col gap-2 sm:right-8 sm:top-[14%] sm:gap-4 lg:right-16">
         <button
           className="px-3 py-2.5 rounded-lg bg-background/80 flex items-center gap-1.5 text-foreground cursor-pointer justify-center"
           onClick={togglePlay}

@@ -45,11 +45,11 @@ export default function ImpactCard({ achievement }: Props) {
   return (
     <article
       ref={ref}
-      className="bg-white text-foreground rounded-4xl p-8 h-[480px] flex flex-col"
+      className="flex min-h-[300px] flex-col rounded-4xl bg-white p-6 text-foreground sm:h-[400px] sm:p-8 lg:h-[480px]"
     >
       <p className="uppercase font-medium">{achievement.title}</p>
 
-      <p className="text-7xl font-bold text-black mt-auto mb-8">
+      <p className="mb-6 mt-auto text-5xl font-bold text-black sm:mb-8 sm:text-6xl lg:text-7xl">
         {displayCount}
         <span className="text-primary">+</span>
       </p>

@@ -9,7 +9,7 @@ export default function CenteredSection({
   className?: string;
 }) {
   return (
-    <section className={cn("max-w-[1400px] mx-auto", className)}>
+    <section className={cn("mx-auto w-full max-w-[1400px] px-5 sm:px-8", className)}>
       {children}
     </section>
   );

@@ -1,6 +1,5 @@
 import herImpactImage from "@/assets/her-impact.jpg";
 import InfoModal from "@/components/InfoModal";
-import { Button } from "@/components/ui/button";
 import { Suspense } from "react";
 import CarouselSection from "./_components/CarouselSection";
 import HeroSection from "./_components/HeroSection";
@@ -21,17 +20,17 @@ export default function Home() {
       <InfoSection />
 
       {/* Impact */}
-      <section className="flex flex-col items-center justify-center h-screen px-8 pb-8">
-        <p className="text-6xl font-bold text-foreground mb-6 uppercase mt-[4%]">
+      <section className="flex min-h-[80svh] flex-col items-center justify-center px-5 py-16 sm:px-8">
+        <p className="mb-6 mt-8 text-center text-4xl font-bold uppercase text-foreground sm:text-5xl lg:text-6xl">
           Our <span className="text-primary">Impact</span> Since 2018
         </p>
 
-        <p className="max-w-[70ch] text-center text-gray-600 mb-20">
+        <p className="mb-12 max-w-[70ch] text-center text-sm text-gray-600 sm:mb-20 sm:text-base">
           We promote social entrepreneurship that empowers women in business,
           young women in leadership and professional women.
         </p>
 
-        <div className="grid grid-cols-4 gap-4 ">
+        <div className="grid w-full max-w-[1400px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {achievements.map((achievement) => (
             <ImpactCard key={achievement.title} achievement={achievement} />
           ))}
@@ -41,9 +40,9 @@ export default function Home() {
       {/* Inclusivity */}
       <section
         style={{ backgroundImage: `url(${herImpactImage.src})` }}
-        className="flex flex-col items-center justify-center h-screen text-transparent bg-center bg-cover bg-clip-text "
+        className="flex min-h-[70svh] flex-col items-center justify-center overflow-hidden bg-cover bg-center text-transparent bg-clip-text sm:min-h-screen"
       >
-        <p className="flex flex-col text-[240px] leading-50 uppercase text-center font-black mb-12">
+        <p className="mb-12 flex flex-col text-center text-[clamp(3rem,15vw,15rem)] leading-[0.9] font-black uppercase">
           <span>Inclusivity</span>
           <span>Matters</span>
         </p>

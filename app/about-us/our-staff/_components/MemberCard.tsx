@@ -14,7 +14,7 @@ export default function MemberCard({ member }: Props) {
     <Link href={memberLink}>
       <article key={member.name}>
         <Image
-          className="size-[300px] rounded-4xl object-cover"
+          className="aspect-square w-full max-w-[300px] rounded-4xl object-cover"
           height={300}
           width={300}
           src={member.imageUrl}

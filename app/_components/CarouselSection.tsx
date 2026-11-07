@@ -29,7 +29,7 @@ export default function CarouselSection() {
   }, []);
 
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className="relative h-[70svh] min-h-[480px] overflow-hidden sm:h-screen">
       {items.map((item, idx) => (
         <article
           key={item.caption + idx}
@@ -45,11 +45,11 @@ export default function CarouselSection() {
             height={2000}
             width={2000}
           />
-          <div className="absolute inset-0 z-10 flex flex-col items-center justify-end gap-6 pb-12 bg-black/20">
+          <div className="absolute inset-0 z-10 flex flex-col items-center justify-end gap-2 bg-black/20 px-4 pb-8 sm:gap-6 sm:pb-12">
             {carouselItems.map((carouselItem) => (
               <p
                 key={carouselItem.caption}
-                className={`text-4xl font-bold uppercase transition-all duration-500 ${
+                className={`text-center text-lg font-bold uppercase transition-all duration-500 sm:text-2xl lg:text-4xl ${
                   carouselItem.caption === item.caption
                     ? "text-background"
                     : "text-transparent [-webkit-text-stroke:1px_white]"
