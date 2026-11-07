@@ -4,6 +4,8 @@ export default function ClimateChangeAndEnvironmentalSustainability() {
   return (
     <WhatWeDoPage
       title="Climate Change and Environmental Sustainability"
+      imageSrc="/what-we-do/climate-change.jpg"
+      imageAlt="Photo for CAI's climate change and environmental sustainability work"
       subtitle="Climate Justice, Community Resilience, and Inclusive Development"
       paragraphs={[
         "At Citizen Advancement Initiative (CAI), we recognize climate change as a critical development challenge that affects livelihoods, economic opportunities, food security, and the well-being of vulnerable communities. We are committed to promoting climate justice, environmental sustainability, and community resilience through research, capacity building, civic engagement, and strategic partnerships.",

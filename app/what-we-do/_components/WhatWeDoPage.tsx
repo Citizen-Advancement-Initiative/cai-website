@@ -1,13 +1,18 @@
+import Image from "next/image";
 import Main from "@/components/Main";
 
 type WhatWeDoPageProps = {
   title: string;
+  imageSrc: string;
+  imageAlt: string;
   subtitle?: string;
   paragraphs: string[];
 };
 
 export default function WhatWeDoPage({
   title,
+  imageSrc,
+  imageAlt,
   subtitle,
   paragraphs,
 }: WhatWeDoPageProps) {
@@ -31,12 +36,14 @@ export default function WhatWeDoPage({
           ))}
         </div>
 
-        <div
-          aria-label="Image placeholder"
-          className="flex aspect-square items-center justify-center rounded-2xl border-2 border-dashed border-foreground/30 bg-foreground/5 text-xl text-foreground/50 shadow-[16px_16px_0px_0px_var(--color-secondary)]"
-          role="img"
-        >
-          Image coming soon
+        <div className="relative aspect-square overflow-hidden rounded-2xl shadow-[16px_16px_0px_0px_var(--color-secondary)]">
+          <Image
+            alt={imageAlt}
+            className="object-cover"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            src={imageSrc}
+          />
         </div>
       </section>
     </Main>

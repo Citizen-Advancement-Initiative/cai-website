@@ -4,6 +4,8 @@ export default function ElectionsAndCommunityPeacebuilding() {
   return (
     <WhatWeDoPage
       title="Elections and Community Peacebuilding"
+      imageSrc="/what-we-do/elections-and-community-peacebuilding.jpg"
+      imageAlt="Photo for CAI's elections and community peacebuilding work"
       subtitle="Promoting Electoral Integrity, Democratic Participation, and Sustainable Peace"
       paragraphs={[
         "At Citizen Advancement Initiative (CAI), we believe that credible elections, informed citizen participation, and peaceful communities are fundamental pillars of democracy and sustainable development. We work to strengthen democratic governance by promoting electoral integrity, civic education, inclusive political participation, and community-led peacebuilding initiatives.",

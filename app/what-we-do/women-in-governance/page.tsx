@@ -4,6 +4,8 @@ export default function WomenInGovernance() {
   return (
     <WhatWeDoPage
       title="Women in Governance"
+      imageSrc="/what-we-do/women-in-governance.jpg"
+      imageAlt="Photo for CAI's women in governance work"
       subtitle="Her Impact: Advancing Women’s Leadership and Influence in Governance"
       paragraphs={[
         "At Citizen Advancement Initiative (CAI), we believe that meaningful governance and inclusive decision-making require the active participation and leadership of women across all sectors.",

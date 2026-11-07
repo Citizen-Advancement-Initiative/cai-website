@@ -4,6 +4,8 @@ export default function SRHRForTeenageGirlsLivingWithDisabilities() {
   return (
     <WhatWeDoPage
       title="Sexual and Reproductive Health and Rights (SRHR) for Teenage Girls Living with Disabilities"
+      imageSrc="/what-we-do/sexual-and-reproductive-health.jpg"
+      imageAlt="Photo for CAI's sexual and reproductive health and rights work"
       subtitle="Advancing SRHR Through Research, Training, and Inclusive Programming"
       paragraphs={[
         "At Citizen Advancement Initiative (CAI), we are committed to advancing the Sexual and Reproductive Health and Rights (SRHR) of teenage girls living with disabilities through research, capacity building, and inclusive community-based interventions. We recognize that girls with disabilities often face additional barriers to accessing accurate SRHR information, appropriate health services, and the support necessary to make informed decisions about their bodies and well-being.",
