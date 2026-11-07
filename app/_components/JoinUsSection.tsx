@@ -4,23 +4,23 @@ import Link from "next/link";
 
 export default function JoinUsSection() {
   return (
-    <section className="relative flex min-h-[680px] items-center justify-center gap-8 overflow-hidden px-5 py-20 sm:min-h-screen sm:gap-10">
-      <p className="uppercase font-medium bg-primary/10 px-3 py-2.5 text-xs rounded-lg">
+    <section className="relative flex min-h-[680px] flex-col items-center justify-center gap-6 overflow-hidden px-5 py-20 sm:min-h-screen sm:gap-10">
+      <p className="z-10 rounded-lg bg-primary/10 px-2.5 py-2 text-[10px] font-medium uppercase sm:px-3 sm:py-2.5 sm:text-xs">
         Take action
       </p>
 
-      <h2 className="z-10 max-w-[16ch] text-center text-4xl font-bold capitalize leading-tight sm:text-5xl lg:text-6xl">
+      <h2 className="z-10 max-w-[11ch] text-center text-2xl font-bold capitalize leading-tight sm:max-w-[16ch] sm:text-5xl lg:text-6xl">
         Join us in making a difference
       </h2>
 
       <div className="z-10 mx-auto flex items-center justify-center gap-6">
-        <div className="flex gap-2 items-center">
-          <p className="text-sm font-medium uppercase text-foreground ">
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          <p className="text-xs font-medium uppercase text-foreground sm:text-sm">
             Learn More
           </p>
 
-          <Link className="border rounded-full p-4 border-foreground/30" href="/about-us">
-            <ArrowUpRightIcon className="size-4" />
+          <Link className="rounded-full border border-foreground/30 p-3 sm:p-4" href="/about-us">
+            <ArrowUpRightIcon className="size-3.5 sm:size-4" />
           </Link>
         </div>
       </div>
