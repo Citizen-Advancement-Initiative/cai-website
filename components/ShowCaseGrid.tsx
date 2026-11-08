@@ -45,7 +45,7 @@ export default function ShowCaseGrid({ showCases }: Props) {
             />
           )}
           <div className="w-full px-2 text-foreground sm:px-6 md:w-1/2 md:px-12 lg:px-20">
-            <p className="mb-4 text-2xl font-medium underline decoration-primary underline-offset-8 sm:mb-6 sm:text-3xl sm:underline-offset-16">
+            <p className="mb-4 text-2xl font-medium  border-b-2 border-b-primary sm:mb-6 sm:text-3xl sm:underline-offset-16">
               {showCase.title}
             </p>
             <p className="text-lg text-foreground/70">{showCase.description}</p>
