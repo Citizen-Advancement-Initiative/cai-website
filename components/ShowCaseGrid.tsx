@@ -1,11 +1,16 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-type ShowCase = {
+type ShowCaseContent = {
   title: string;
   description: string;
-  imageUrl: string;
 };
+
+type ShowCase = ShowCaseContent &
+  (
+    | { imageUrl: string; videoUrl?: never }
+    | { imageUrl?: never; videoUrl: string }
+  );
 
 type Props = {
   showCases: ShowCase[];
@@ -21,13 +26,24 @@ export default function ShowCaseGrid({ showCases }: Props) {
             "md:flex-row-reverse": index % 2 === 0,
           })}
         >
-          <Image
-            className="aspect-square w-full max-w-[700px] object-cover md:w-1/2"
-            src={showCase.imageUrl}
-            width={700}
-            height={700}
-            alt={""}
-          />
+          {showCase.imageUrl ? (
+            <Image
+              className="aspect-square w-full max-w-[700px] object-cover md:w-1/2"
+              src={showCase.imageUrl}
+              width={700}
+              height={700}
+              alt=""
+            />
+          ) : (
+            <video
+              className="aspect-square w-full max-w-[700px] object-cover md:w-1/2"
+              src={showCase.videoUrl}
+              controls
+              playsInline
+              preload="metadata"
+              aria-label={showCase.title}
+            />
+          )}
           <div className="w-full px-2 text-foreground sm:px-6 md:w-1/2 md:px-12 lg:px-20">
             <p className="mb-4 text-2xl font-medium underline decoration-primary underline-offset-8 sm:mb-6 sm:text-3xl sm:underline-offset-16">
               {showCase.title}
