@@ -4,6 +4,7 @@ import Image from "next/image";
 type ShowCaseContent = {
   title: string;
   description: string;
+  imageAlt?: string;
 };
 
 type ShowCase = ShowCaseContent &
@@ -32,7 +33,7 @@ export default function ShowCaseGrid({ showCases }: Props) {
               src={showCase.imageUrl}
               width={700}
               height={700}
-              alt=""
+              alt={showCase.imageAlt ?? ""}
             />
           ) : (
             <video

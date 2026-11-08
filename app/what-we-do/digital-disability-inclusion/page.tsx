@@ -103,6 +103,24 @@ export default function DigitalDisabilityInclusion() {
                 "A student at Kibos Special School explores digital skills using JAWS screen reader software, demonstrating how assistive technology makes computer learning accessible and empowering.",
               imageUrl: "/digital-disability-inclusion/lts.jpeg",
             },
+            {
+              title: "Technology Learning, Side by Side",
+              description:
+                "Students gather around computers and assistive devices as their instructor leads a digital skills lesson. Hands-on training helps make technology more accessible while building learners' confidence and independence.",
+              imageUrl:
+                "/digital-disability-inclusion/kibos-digital-skills-workshop.jpeg",
+              imageAlt:
+                "An instructor leads a digital skills lesson as Kibos students work with computers and assistive devices.",
+            },
+            {
+              title: "Discovering Digital Tools Together",
+              description:
+                "Students and their instructor work together at a computer during a practical lesson. By learning collaboratively, students can explore accessible technology and develop skills for more independent digital learning.",
+              imageUrl:
+                "/digital-disability-inclusion/kibos-collaborative-learning.jpeg",
+              imageAlt:
+                "Students and an instructor gather around a computer to learn digital skills together.",
+            },
           ]}
         />
       </CenteredSection>
