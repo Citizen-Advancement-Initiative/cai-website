@@ -10,10 +10,31 @@ export default function DigitalDisabilityInclusion() {
         <div>
           <Text variant="heading">Digital Disability Inclusion </Text>
           <Text>
-            We champion digital inclusion by empowering learners with
-            disabilities through assistive technology and skills training. Our
-            programs ensure every learner can participate, innovate, and thrive
-            in the digital world.
+            Creating equal access to digital skills, technology and opportunity
+            for learners with disabilities. Through the No One Left Behind
+            initiative, we are working with three special needs schools to
+            bridge the digital divide and promote meaningful digital inclusion
+            for learners with disabilities. Our programme focuses on equipping
+            learners with practical digital skills while addressing the
+            accessibility barriers that may prevent them from independently
+            accessing and using technology. Learners receive training in:
+            Digital Literacy: Developing essential computer skills, navigating
+            digital platforms and using technology for learning, communication
+            and everyday activities. Online Safety and Cybersecurity:
+            Understanding digital risks, protecting personal information,
+            identifying online threats and practising responsible digital
+            citizenship. Online Marketing and Digital Freelancing: Exploring
+            digital platforms, content creation, online branding and
+            opportunities to generate income through digital skills. Artificial
+            Intelligence: Introducing learners to AI tools and their practical
+            applications in education, creativity, communication and everyday
+            problem-solving. Beyond digital skills training, we identify the
+            specific accessibility barriers experienced by learners in each
+            school and introduce appropriate assistive technology solutions. We
+            also train teachers in inclusive pedagogy and the integration of
+            technology into everyday teaching and learning. Our approach is
+            centred on one principle: Disability should not be a barrier to
+            accessing digital opportunities.
           </Text>
         </div>
         <video
