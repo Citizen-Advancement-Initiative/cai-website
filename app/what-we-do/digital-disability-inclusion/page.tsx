@@ -205,6 +205,74 @@ export default function DigitalDisabilityInclusion() {
           ]}
         />
       </CenteredSection>
+
+      <CenteredSection className="mt-24">
+        <Text variant="sub-heading">
+          Building Teachers&apos; Capacity in Inclusive Pedagogy and Assistive
+          Technology
+        </Text>
+        <Text className="text-base">
+          <p>
+            We brought together teachers from <b>Kibos School for the Blind</b>,{" "}
+            <b>Maseno School for the Deaf</b> and{" "}
+            <b>Joyland Special School</b> for a capacity-building workshop
+            focused on strengthening inclusive teaching practices. The training
+            equipped teachers with practical approaches to inclusive pedagogy,
+            helping them understand and respond to the diverse learning needs
+            and abilities of learners with disabilities.
+          </p>
+
+          <p>
+            Teachers also received hands-on training in the use of{" "}
+            <b>assistive software and accessible technologies</b>, exploring
+            how these tools can remove learning barriers and support greater
+            learner participation and independence. The workshop emphasised
+            integrating assistive technology into everyday classroom
+            instruction to create more accessible, engaging and inclusive
+            learning environments across the three schools.
+          </p>
+        </Text>
+        <ShowCaseGrid
+          showCases={[
+            {
+              title: "Teachers Sharing Inclusive Teaching Practices",
+              description:
+                "A facilitator leads a discussion with teachers from the three schools, sharing practical approaches to inclusive pedagogy and responding to learners' diverse needs.",
+              imageUrl:
+                "/digital-disability-inclusion/inclusive-teacher-workshop.jpeg",
+              imageAlt:
+                "A facilitator addresses teachers during an inclusive education workshop.",
+            },
+            {
+              title: "Exploring Inclusive Pedagogy Together",
+              description:
+                "Workshop facilitators present teaching strategies to participating teachers. The session focuses on practical ways to make classroom learning more accessible and engaging for learners with disabilities.",
+              imageUrl:
+                "/digital-disability-inclusion/inclusive-pedagogy-training.jpeg",
+              imageAlt:
+                "Two facilitators present inclusive teaching methods to teachers at a workshop.",
+            },
+            {
+              title: "Assistive Technology for Removing Learning Barriers",
+              description:
+                "A trainer introduces assistive technology options for learners with physical disabilities, demonstrating tools and approaches teachers can incorporate into everyday instruction.",
+              imageUrl:
+                "/digital-disability-inclusion/assistive-technology-teacher-training.jpeg",
+              imageAlt:
+                "A trainer points to a presentation about assistive technology for physical impairments.",
+            },
+            {
+              title: "Inclusive Communication in the Classroom",
+              description:
+                "A sign language interpreter supports communication during the workshop as a presenter speaks and a participant follows along on a laptop, illustrating the value of accessible communication in learning environments.",
+              imageUrl:
+                "/digital-disability-inclusion/inclusive-teaching-practice.jpeg",
+              imageAlt:
+                "A sign language interpreter supports communication between a presenter and workshop participants.",
+            },
+          ]}
+        />
+      </CenteredSection>
     </Main>
   );
 }
