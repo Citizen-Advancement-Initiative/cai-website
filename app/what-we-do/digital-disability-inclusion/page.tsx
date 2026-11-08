@@ -124,6 +124,77 @@ export default function DigitalDisabilityInclusion() {
           ]}
         />
       </CenteredSection>
+
+      <CenteredSection className="mt-24">
+        <Text variant="sub-heading">
+          Maseno School for the Deaf: Advancing Inclusive Communication Through
+          AI
+        </Text>
+        <Text className="text-base space-y-2">
+          <p>
+            At Maseno School for the Deaf, our programme focuses on removing
+            communication and digital accessibility barriers while equipping
+            deaf learners with skills to participate in an increasingly digital
+            world. Learners have received practical training in digital
+            literacy, online safety and cybersecurity, online marketing, digital
+            freelancing and artificial intelligence. We also introduced{" "}
+            <b>Google Live Caption</b>, which converts spoken audio into
+            real-time text, making digital content and communication more
+            accessible.
+          </p>
+
+          <p>
+            In partnership with{" "}
+            <b>
+              Maseno University, we developed a multilingual AI-powered sign
+              language avatar
+            </b>{" "}
+            that translates text into sign language in real time. The solution
+            supports communication across multiple languages, including English,
+            Kiswahili and Luo, creating new opportunities for deaf learners to
+            access digital information and engage with technology. This
+            innovation demonstrates our commitment to using AI and assistive
+            technology to build a more inclusive digital environment.
+          </p>
+        </Text>
+        <ShowCaseGrid
+          showCases={[
+            {
+              title: "Exploring AI and Accessible Communication",
+              description:
+                "Maseno students and their teacher explore digital tools together. Introducing AI and accessible technology in the classroom can help deaf learners engage with information and build confidence using digital resources.",
+              imageUrl:
+                "/digital-disability-inclusion/maseno-ai-communication.jpeg",
+              imageAlt:
+                "Maseno students and their teacher gather around computers during a digital learning session.",
+            },
+            {
+              title: "Learning Digital Skills Together",
+              description:
+                "Students work in small groups at laptops during a hands-on lesson. Collaborative practice helps learners strengthen their digital skills and explore technology in an inclusive classroom.",
+              imageUrl:
+                "/digital-disability-inclusion/maseno-digital-learning.jpeg",
+              imageAlt:
+                "Maseno students collaborate at laptops during a digital skills lesson.",
+            },
+            {
+              title: "Building Inclusive Digital Futures",
+              description:
+                "Learners and educators come together to explore technology in the classroom. Through practical digital learning and AI, deaf students can access new ways to communicate, learn and participate in the digital world.",
+              imageUrl: "/digital-disability-inclusion/maseno-ai-workshop.jpeg",
+              imageAlt:
+                "Students and educators gather around computers during a classroom technology workshop.",
+            },
+            {
+              title:
+                "AI-Powered Multilingual Sign Language Avatar: Making Digital Communication Accessible",
+              description:
+                "Watch our AI-powered multilingual sign language avatar, developed in partnership with Maseno University, translate text into sign language in real time. This innovation demonstrates how artificial intelligence can bridge communication barriers, improve access to digital information and create more inclusive learning experiences for deaf learners. By supporting multiple languages, the solution is helping make technology more accessible and opening new possibilities for communication and digital inclusion.",
+                videoUrl:"/digital-disability-inclusion/ai-pmsla.mp4"
+            },
+          ]}
+        />
+      </CenteredSection>
     </Main>
   );
 }
