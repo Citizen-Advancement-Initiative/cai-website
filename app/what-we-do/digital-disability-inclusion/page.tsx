@@ -121,6 +121,16 @@ export default function DigitalDisabilityInclusion() {
               imageAlt:
                 "Students and an instructor gather around a computer to learn digital skills together.",
             },
+            {
+              title:
+                "Accessible Learning Materials: Bringing Digital Skills to Learners Through Braille",
+              description:
+                "To promote inclusive access to digital skills training at Kibos School for the Blind, we transcribed key learning modules into Braille, ensuring that learners could independently access and engage with the training content. The adapted materials include modules on Cybersecurity and Online Safety and Online Marketing, enabling visually impaired learners to study essential digital concepts through an accessible format. This initiative reinforces our commitment to ensuring that disability does not become a barrier to accessing digital knowledge, building skills and participating in the digital economy.",
+              imageUrl:
+                "/digital-disability-inclusion/kibos-braille-training-materials.jpeg",
+              imageAlt:
+                "Braille copies of CAI's online marketing and digital freelancing training materials.",
+            },
           ]}
         />
       </CenteredSection>

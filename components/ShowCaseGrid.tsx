@@ -11,6 +11,7 @@ type ShowCase = ShowCaseContent &
   (
     | { imageUrl: string; videoUrl?: never }
     | { imageUrl?: never; videoUrl: string }
+    | { imageUrl?: never; videoUrl?: never }
   );
 
 type Props = {
@@ -35,7 +36,7 @@ export default function ShowCaseGrid({ showCases }: Props) {
               height={700}
               alt={showCase.imageAlt ?? ""}
             />
-          ) : (
+          ) : showCase.videoUrl ? (
             <video
               className="aspect-square w-full max-w-[700px] object-cover md:w-1/2"
               src={showCase.videoUrl}
@@ -43,6 +44,11 @@ export default function ShowCaseGrid({ showCases }: Props) {
               playsInline
               preload="metadata"
               aria-label={showCase.title}
+            />
+          ) : (
+            <div
+              className="aspect-square w-full max-w-[700px] md:w-1/2"
+              aria-hidden="true"
             />
           )}
           <div className="w-full px-2 text-foreground sm:px-6 md:w-1/2 md:px-12 lg:px-20">
